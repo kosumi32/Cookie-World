@@ -26,6 +26,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	backdrop-filter: blur(2px);
+	background-color: #6c432f; /* Added for clarity, can change */
 }
 
 .logo {
@@ -104,6 +105,22 @@ header {
 	backdrop-filter: blur(20px);
 	box-shadow: 0 0 25px rgba(0, 0, 0, .5);
 }
+/*Test Position for temporary landing page*/
+.testPostiion h1{
+	z-index: 1;
+	color: white;
+	font-size: 27px;
+	background-color: aqua;
+	position: relative;
+	top: 40px;
+	left: 80%;
+}
+.testPostiion img{
+	width: 400px;
+	height: 300px;
+	object-fit: cover;
+}
+
 
 .wrapper h1 {
 	font-size: 27px;
