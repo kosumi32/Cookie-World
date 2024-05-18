@@ -7,9 +7,7 @@
 
 
 body {
-	background: url("background.jpg");
-/*	background-size: cover;*/
-/*	background-position: center;*/
+	color: black;
 }
 
 header {
@@ -23,12 +21,12 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	backdrop-filter: blur(2px);
-	background-color: chocolate;
+	background: linear-gradient(45deg, rgb(66, 15, 114), rgb(175, 31, 108));
 }
 
 
 .logo {
-	font-size: 50px;
+	font-size: 60px;
 	color: #fff;
 
 /*	Prevent text selection*/
@@ -67,17 +65,42 @@ header {
 }
 
 main{
-	color: #fff;
-	margin-top: 110px;
+	margin-top: 150px;
 	margin-left: 20px;
 }
 
-main h2{
-    font-size: 30px;    
+main .row1 h2{
+    font-size: 50px;    
+}
+
+main .row1{
+	display: flex;
+}
+
+main .row1 #btn1{
+	margin-left: 200px;
+}
+
+main .row1 .btn {
+	font-size: 50px;
+	cursor: pointer;
+	border: none;
+	background: none;
+	outline: none;
+	color: grey;
+}
+
+main .row1 .btn.filled {
+	color: gold;
+}
+
+main .row1 #btn1 i:hover{
+	cursor: pointer;
 }
 
 main p{
-	margin: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }
 
 
