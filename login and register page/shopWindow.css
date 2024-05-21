@@ -8,7 +8,7 @@
 	background-position: center;
 	display: flex;
 	justify-content: right;
-	
+	margin: 3vw;
 }
 .testPostiion h1{
 	z-index: 1;
