@@ -103,6 +103,14 @@ main p{
 	margin-bottom: 50px;
 }
 
+main .content{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+main .object{
+	background-image: url();
+}
 
 
 
