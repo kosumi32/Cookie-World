@@ -1,0 +1,23 @@
+/*Test Position for temporary landing page*/
+.shopWindow{
+	width: 80vw;
+	height: 10vw;
+	background-image: url("shop.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	justify-content: right;
+	margin: 3vw;
+}
+.testPostiion h1{
+	z-index: 1;
+	color: white;
+	width: 40vw;
+	font-size: 27px;
+	background-color: aqua;
+	position: relative;
+	/*left: 50%;*/
+	/*top: 40px;
+	left: 80%;*/
+}
