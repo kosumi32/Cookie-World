@@ -103,19 +103,18 @@ main p{
 	margin-bottom: 50px;
 }
 
-main .gallery .image{
+main .gallery .object{
 	display: inline-block;
 	border: 1px solid rgb(104, 103, 103);
 	margin: 10px;
-}
-
-main .gallery .image{
 	padding: 10px;
-	text-align: center;
+	text-align: left;
 }
 
-main .gallery .image :hover{
-	border: 1px solid black;
+main .gallery .object .quantity{
+	display: flex;
+	justify-content: right;
+	margin: 20px;
 }
 
 main .gallery{
@@ -124,8 +123,26 @@ main .gallery{
 	flex-wrap: wrap;
 }
 
+main .gallery .object img{
+	border-radius: 10px;
+}
 
+.quantity {
+	display: flex;
+	align-items: center;
+}
 
+.quantity button {
+	background: none;
+	border: none;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+
+.quantity span {
+	margin: 0 10px;
+	font-size: 1.2em;
+}
 /*
 .navigation .btnLogin-popip {
 	width: 120px;
