@@ -4,14 +4,23 @@
 	border-radius: 10px;
 	width: 80vw;
 	height: 13vw;
-	background-image: url("images/he&she.jpg"); /*He&She image*/
+	
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position-y: 30%;
-	background-position-x: 80%;
+	
 	display: flex;
 	justify-content: right;
 	margin: 3vw;
+}
+.heAndShe{
+	background-image: url("images/he&she.jpg"); /*He&She image*/
+	background-position-y: 30%;
+	background-position-x: 80%;
+}
+.richamo{
+	background-image: url("images/Richamo.jpg"); /*Richamo image*/
+	background-position-y: 20%;
+	background-position-x: 80%;
 }
 .tag{
 position: relative;
@@ -19,17 +28,17 @@ top: 65%;
 left: -40%;
 height: 50%;
 }
-.testPostiion {
+.shopDesc {
 	color: white;
 	width: 35vw;
 	font-size: 27px;
 	position: relative;
-	background: rgb(0 0 0 / 40%);/*opacity of background*/
+	background: rgb(0 0 0 / 60%);/*opacity of background*/
 	/*left: 50%;*/
 	/*top: 40px;
 	left: 80%;*/
 }
-.testPostiion h2{
+.shopDesc h2{
 	font-size: 20px;
 }
 
