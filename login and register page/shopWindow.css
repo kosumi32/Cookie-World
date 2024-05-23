@@ -2,7 +2,7 @@
 .shopWindow{
 	width: 80vw;
 	height: 10vw;
-	background-image: url("shop.jpeg");
+	background-image: url("images/shop.jpeg");
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
