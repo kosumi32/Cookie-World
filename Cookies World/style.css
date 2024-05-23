@@ -1,0 +1,457 @@
+/* Cookies World Header */
+
+body {
+	color: black;
+}
+
+.title .headerContainer {
+	/* position: fixed; */
+	top: 0;
+	left: 0;
+	width: 100%;
+    height: 50px;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	backdrop-filter: blur(2px);
+	/* background: linear-gradient(45deg, rgb(66, 15, 114), rgb(175, 31, 108)); */
+}
+
+
+.logo {
+	font-size: 40px;
+	color: #000000;
+
+	/*	Prevent text selection*/
+	user-select: none;
+}
+
+.navigation a {
+	position: relative;
+	font-size: 20px;
+	color: #000000;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 35px;
+}
+
+.navigation a::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background: plum;
+	/*	border-radius: 5px;*/
+	left: 0;
+	bottom: -5px;
+
+	/*	a: Starting position of the line is at 0*/
+	transform: scaleX(0);
+	transition: transform .5s;
+	transform-origin: right;
+}
+
+/*  b: Then change to 1*/
+.navigation a:hover::after {
+	transform-origin: left;
+	transform: scaleX(1);
+}
+
+.navbar-brand {
+    padding-left: 20px;
+    font-size: 45px;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+}
+
+.navbar-collapse {
+    justify-content: end;
+    margin-right: 3.5%;
+}
+
+.container-md {
+    margin: 15px auto 20px auto;
+}
+
+body {
+    margin: 0;
+    font-family: Poppins;
+}
+
+svg {
+    width: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: 1000px;
+    max-width: 90vw;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+    transition: 0.5s;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.icon-cart {
+    position: relative;
+}
+
+.icon-cart span {
+    background-color: purple;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    color: aliceblue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 45px;
+    margin-bottom: 15px;
+    
+}
+
+/* cartTab */
+.cartTab {
+    background-color: purple;
+    color: aliceblue;
+
+    /* default size for laptop/ ipad */
+    width: 400px;
+
+    /* size for mobile */
+    max-width: 100%;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+}
+
+.cartTab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.cartTab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.cartTab .btn button {
+    background-color: beige;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+}
+
+/* First button */
+.cartTab .btn button.close {
+    background-color: azure;
+}
+
+.cartTab .listCart {
+    /* a: In case too much items, it will not break */
+    overflow: auto;
+}
+
+/* b: In stead becomes a scrollbar */
+.cartTab .listCart::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Open / Close shopping cart window */
+.cartTab {
+    right: -400px;
+    transition: 1s;
+}
+
+body.activeTabCart .cartTab {
+    right: 0;
+}
+
+body.activeTabCart .container {
+    transform: translate(-250px);
+}
+
+
+/* list item Product */
+.listProduct .item img {
+    width: 90%;
+
+    /* Make a shadow effect */
+    filter: drop-shadow(
+        0 50px 20px #0009
+    );
+}
+
+.listProduct {
+    display: grid;
+
+    /* Make them into 4 columns */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.listProduct .item {
+    background-color: #eeeee6;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+.listProduct .item h2 {
+    font-weight: 550;
+    font-size: larger;
+}
+
+.listProduct .item .price {
+    letter-spacing: 5px;
+    font-size: small;
+}
+
+.listProduct .item button {
+    background-color: rgb(54, 46, 46);
+    color: white;
+    border: none;
+    padding:  5px 15px;
+    margin-top: 17.5px;
+    border-radius: 25px;
+}
+
+/* shopping cart */
+.listCart .item img {
+    width: 100%;
+}
+
+.listCart .item {
+    display: grid;
+    /* Into 4 columns */
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 12.5px;
+    align-items: center;
+    text-align: center;
+}
+
+.listCart .item .quantity {
+    display: flex;
+}
+
+.listCart .item .quantity span {
+    width: 25px;
+    height: 25px;
+    background-color: #eeeee6;
+    color:black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Second span tag (Quantity) */
+.listCart .item .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: #fff;
+}
+
+/* If many product */
+.listCart .item:nth-child(even) {
+    background-color: #eee1;
+}
+
+
+/* Detail */
+.detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    text-align: left;
+}
+
+.detail .image img{
+    width: 100%;
+}
+
+.detail .image {
+    position: relative;
+}
+
+.detail .image::before {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+
+    /* For before to work */
+    content: " ";
+    background-color: #94817733;
+    z-index: -1;
+
+    /* Random number */
+    border-radius: 185px 100px 165px 120px;
+    left: calc(50% - 150px);
+    top: 50px;
+}
+
+.detail .name{
+    font-size: 45px;
+    padding-top: 40px;
+    margin-bottom: 15px;
+}
+
+.detail .price {
+    font-weight: bolder;
+    font-size: 30px;
+    letter-spacing: 7px;
+    margin-bottom: 25px;
+}
+
+.detail .buttons button {
+    background-color: #eee;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    font-family: Poppins;
+    font-size: 20px;
+}
+
+.detail svg {
+    width: 25px;
+}
+
+.detail .buttons button:nth-child(2) {
+    background-color: #2F2F2F;
+    color: #eee;
+    display: inline-flex;
+    gap: 12px;
+    box-shadow: 0 10px 20px #2F2F2F77;
+}
+
+/* Adjust the height of the shopping cart icon */
+.detail .buttons svg {
+    transform: translateY(-2.5px);
+}
+
+.detail .description {
+    margin-top: 30px;
+    font-weight: 300;
+}
+
+/* responsive */
+@media screen and (max-width: 992px) {
+    .listProduct {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .listProduct {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .detail {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .detail .image img {
+        width: unset;
+        height: 40vh;
+    }
+
+    .detail .name {
+        font-size: x-large;
+        margin: 0;
+    }
+
+    .detail .buttons button {
+        font-size: small;
+    }
+}
+
+
+
+
+/* Phoo Part */
+.review {
+	margin-left: 10px;
+	margin-right: 10px;
+
+}
+
+.review .title {
+	margin-top: 100px;
+	padding-left: 10px;
+	margin-bottom: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-left: 8px solid;
+	background-color: rgb(205, 188, 221);
+	border-color: rgb(66, 15, 114);
+	font-size: 2vw;
+}
+
+.review h2 {
+	margin: 20px;
+}
+
+.review p {
+	background-color: rgb(235, 213, 255);
+	border-radius: 10px;
+	padding: 10px;
+	margin: 20px
+}
+
+.review .commentSection{
+	background-color: rgb(66, 15, 114);
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+}
+
+.review .latestReviews{
+	background-color: rgb(66, 15, 114);
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+}
+
+.restaurant-photo img {
+    width: 30%;
+}
+
+.restaurant-photo {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10vw;
+	margin-top: 5vw;
+	margin-bottom: 5vw;
+}
+
+.restaurant-photo .info-text {
+    padding-top: 150px;
+    margin-left: 100px;
+    margin-right: 200px;
+}
+
