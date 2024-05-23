@@ -103,13 +103,25 @@ main p{
 	margin-bottom: 50px;
 }
 
-main .content{
-	display: flex;
-	flex-wrap: wrap;
+main .gallery .image{
+	display: inline-block;
+	border: 1px solid rgb(104, 103, 103);
+	margin: 10px;
 }
 
-main .object{
-	background-image: url();
+main .gallery .image{
+	padding: 10px;
+	text-align: center;
+}
+
+main .gallery .image :hover{
+	border: 1px solid black;
+}
+
+main .gallery{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 }
 
 
