@@ -95,7 +95,7 @@ main .row1 .btn.filled {
 }
 
 main .row1 #btn1 i:hover{
-	cursor: pointer;
+	cursor: grab;
 }
 
 main p{
@@ -111,12 +111,6 @@ main .gallery .object{
 	text-align: left;
 }
 
-main .gallery .object .quantity{
-	display: flex;
-	justify-content: right;
-	margin: 20px;
-}
-
 main .gallery{
 	display: flex;
 	justify-content: space-around;
@@ -125,11 +119,15 @@ main .gallery{
 
 main .gallery .object img{
 	border-radius: 10px;
+	width: 25vw;
+	height: 16vw;
 }
 
 .quantity {
 	display: flex;
 	align-items: center;
+	justify-content: right;
+	margin: 20px;
 }
 
 .quantity button {
@@ -143,6 +141,26 @@ main .gallery .object img{
 	margin: 0 10px;
 	font-size: 1.2em;
 }
+
+main .review{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 50px;		
+}
+
+main .review .title{
+	margin-top: 100px;
+	padding-left: 10px;
+	margin-bottom: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-left: 8px solid;
+	background-color: rgb(205, 188, 221);
+	border-color: rgb(66, 15, 114);
+	font-size: 2vw;
+}
+
+
 /*
 .navigation .btnLogin-popip {
 	width: 120px;
