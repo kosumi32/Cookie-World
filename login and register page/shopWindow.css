@@ -1,23 +1,38 @@
 /*Test Position for temporary landing page*/
 .shopWindow{
+	
+	border-radius: 10px;
 	width: 80vw;
-	height: 10vw;
-	background-image: url("images/shop.jpeg");
+	height: 13vw;
+	background-image: url("images/he&she.jpg"); /*He&She image*/
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position-y: 30%;
+	background-position-x: 80%;
 	display: flex;
 	justify-content: right;
 	margin: 3vw;
 }
-.testPostiion h1{
-	z-index: 1;
+.tag{
+position: relative;
+top: 65%;
+left: -40%;
+height: 50%;
+}
+.testPostiion {
 	color: white;
-	width: 40vw;
+	width: 35vw;
 	font-size: 27px;
-	background-color: aqua;
 	position: relative;
+	background: rgb(0 0 0 / 40%);/*opacity of background*/
 	/*left: 50%;*/
 	/*top: 40px;
 	left: 80%;*/
+}
+.testPostiion h2{
+	font-size: 20px;
+}
+
+a {
+	text-decoration: none;
 }
