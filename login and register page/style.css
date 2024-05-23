@@ -82,7 +82,7 @@ header {
 	color: #fff;
 	font-weight: 500;
 	margin-left: 35px;
-
+	text-decoration: none;
 	/*Animation time*/
 	transition: .5s;
 }
