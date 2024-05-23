@@ -95,7 +95,7 @@ main .row1 .btn.filled {
 }
 
 main .row1 #btn1 i:hover{
-	cursor: pointer;
+	cursor: grab;
 }
 
 main p{
