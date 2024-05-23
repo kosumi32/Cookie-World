@@ -13,10 +13,10 @@ body {
 header {
 	position: fixed;
 	top: 0;
-/*	left: 0;*/
+	/*	left: 0;*/
 	width: 100%;
 	padding: 20px;
-/*	background: red;*/
+	/*	background: red;*/
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -29,7 +29,7 @@ header {
 	font-size: 60px;
 	color: #fff;
 
-/*	Prevent text selection*/
+	/*	Prevent text selection*/
 	user-select: none;
 }
 
@@ -48,11 +48,11 @@ header {
 	width: 100%;
 	height: 2px;
 	background: #fff;
-/*	border-radius: 5px;*/
+	/*	border-radius: 5px;*/
 	left: 0;
 	bottom: -5px;
 
-/*	a: Starting position of the line is at 0*/
+	/*	a: Starting position of the line is at 0*/
 	transform: scaleX(0);
 	transition: transform .5s;
 	transform-origin: right;
@@ -64,20 +64,20 @@ header {
 	transform: scaleX(1);
 }
 
-main{
+main {
 	margin-top: 150px;
 	margin-left: 20px;
 }
 
-main .row1 h2{
-    font-size: 50px;    
+main .row1 h2 {
+	font-size: 50px;
 }
 
-main .row1{
+main .row1 {
 	display: flex;
 }
 
-main .row1 #btn1{
+main .row1 #btn1 {
 	margin-left: 200px;
 }
 
@@ -94,16 +94,16 @@ main .row1 .btn.filled {
 	color: gold;
 }
 
-main .row1 #btn1 i:hover{
+main .row1 #btn1 i:hover {
 	cursor: grab;
 }
 
-main p{
+main p {
 	margin-top: 50px;
 	margin-bottom: 50px;
 }
 
-main .gallery .object{
+main .gallery .object {
 	display: inline-block;
 	border: 1px solid rgb(104, 103, 103);
 	margin: 10px;
@@ -111,13 +111,13 @@ main .gallery .object{
 	text-align: left;
 }
 
-main .gallery{
+main .gallery {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
 }
 
-main .gallery .object img{
+main .gallery .object img {
 	border-radius: 10px;
 	width: 25vw;
 	height: 16vw;
@@ -142,13 +142,13 @@ main .gallery .object img{
 	font-size: 1.2em;
 }
 
-main .review{
+main .review {
 	margin-left: 10px;
 	margin-right: 10px;
-	margin-bottom: 50px;		
+
 }
 
-main .review .title{
+main .review .title {
 	margin-top: 100px;
 	padding-left: 10px;
 	margin-bottom: 50px;
@@ -160,6 +160,47 @@ main .review .title{
 	font-size: 2vw;
 }
 
+main .review h2 {
+	margin: 20px;
+}
+
+main .review p {
+	background-color: rgb(235, 213, 255);
+	border-radius: 10px;
+	padding: 10px;
+	margin: 20px
+}
+
+main .review .commentSection{
+	background-color: rgb(66, 15, 114);
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+}
+
+main .review .latestReviews{
+	background-color: rgb(66, 15, 114);
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px;
+}
+
+main .restaurant-photo img {
+    width: 30%;
+}
+
+.restaurant-photo {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10vw;
+	margin-bottom: 10vw;
+}
+
+main .restaurant-photo .info-text {
+    padding-top: 150px;
+    margin-left: 100px;
+    margin-right: 200px;
+}
 
 /*
 .navigation .btnLogin-popip {
