@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Eugene Gay</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="images/jpg" href="images/cookies.jpg">
+    <link rel="stylesheet" href="inside.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo">Cookie World</h1>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Cart</a>
+            <a href="#">Contact</a>
+            <!-- <button class="btnLogin-popip">Login</button> -->
+        </nav>
+    </header>
+    <main>
+        <div class="row1">
+            <h2>HE & SHE CAFE</h2>
+            <button class="btn" id="btn1" onclick="Toggle1()">
+                <i class="fa fa-star"></i>
+            </button>
+        </div>
+        <p>THIS CAFE IS OVERPRICE SHIT FOOD, YOU CAN COME HERE IF U WANT TO WASTE YOUR PARENTS MONEY.</p>
+        <div class="gallery">
+            <div class="object">
+                <a target="_blank" href="images/redVelvet.jpg">
+                    <img src="images/redVelvet.jpg" alt="redVelvet">
+                </a>
+                <div class="content">Red Velvet</div>
+                <div class="quantity">
+                    <button class="minus"><i class="fas fa-minus-circle"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus"><i class="fas fa-plus-circle"></i></button>
+                </div>
+            </div>
+            <div class="object">
+                <a target="_blank" href="images/redVelvet.jpg">
+                    <img src="images/redVelvet.jpg" alt="redVelvet">
+                </a>
+                <div class="content">Red Velvet</div>
+                <div class="quantity">
+                    <button class="minus"><i class="fas fa-minus-circle"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus"><i class="fas fa-plus-circle"></i></button>
+                </div>
+            </div>
+            <div class="object">
+                <a target="_blank" href="images/redVelvet.jpg">
+                    <img src="images/redVelvet.jpg" alt="redVelvet">
+                </a>
+                <div class="content">Red Velvet</div>
+                <div class="quantity">
+                    <button class="minus"><i class="fas fa-minus-circle"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus"><i class="fas fa-plus-circle"></i></button>
+                </div>
+            </div>
+            <div class="object">
+                <a target="_blank" href="images/redVelvet.jpg">
+                    <img src="images/redVelvet.jpg" alt="redVelvet">
+                </a>
+                <div class="content">Red Velvet</div>
+                <div class="quantity">
+                    <button class="minus"><i class="fas fa-minus-circle"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus"><i class="fas fa-plus-circle"></i></button>
+                </div>
+            </div>
+            <div class="object">
+                <a target="_blank" href="images/redVelvet.jpg">
+                    <img src="images/redVelvet.jpg" alt="redVelvet">
+                </a>
+                <div class="content">Red Velvet</div>
+                <div class="quantity">
+                    <button class="minus"><i class="fas fa-minus-circle"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus"><i class="fas fa-plus-circle"></i></button>
+                </div>
+            </div>
+            <div class="object">
+                <a target="_blank" href="images/redVelvet.jpg">
+                    <img src="images/redVelvet.jpg" alt="redVelvet">
+                </a>
+                <div class="content">Red Velvet</div>
+                <div class="quantity">
+                    <button class="minus"><i class="fas fa-minus-circle"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus"><i class="fas fa-plus-circle"></i></button>
+                </div>
+            </div>
+            <div class="object">
+                <a target="_blank" href="images/redVelvet.jpg">
+                    <img src="images/redVelvet.jpg" alt="redVelvet">
+                </a>
+                <div class="content">Red Velvet</div>
+                <div class="quantity">
+                    <button class="minus"><i class="fas fa-minus-circle"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus"><i class="fas fa-plus-circle"></i></button>
+                </div>
+            </div>
+            <div class="object">
+                <a target="_blank" href="images/redVelvet.jpg">
+                    <img src="images/redVelvet.jpg" alt="redVelvet">
+                </a>
+                <div class="content">Red Velvet</div>
+                <div class="quantity">
+                    <button class="minus"><i class="fas fa-minus-circle"></i></button>
+                    <span class="quantity-value">0</span>
+                    <button class="plus"><i class="fas fa-plus-circle"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Toggle favorite button color
+            var btnvar1 = document.getElementById('btn1');
+            function Toggle1() {
+                if (btnvar1.style.color == "gold") {
+                    btnvar1.style.color = "grey";
+                } else {
+                    btnvar1.style.color = "gold";
+                }
+            }
+
+            // Handle quantity increment and decrement
+            document.addEventListener('DOMContentLoaded', function () {
+                const quantities = document.querySelectorAll('.quantity');
+
+                quantities.forEach(quantity => {
+                    const minusButton = quantity.querySelector('.minus');
+                    const plusButton = quantity.querySelector('.plus');
+                    const quantityValue = quantity.querySelector('.quantity-value');
+
+                    minusButton.addEventListener('click', function () {
+                        let currentValue = parseInt(quantityValue.textContent);
+                        if (currentValue > 0) { // Prevent the value from going below 0
+                            quantityValue.textContent = currentValue - 1;
+                        }
+                    });
+
+                    plusButton.addEventListener('click', function () {
+                        let currentValue = parseInt(quantityValue.textContent);
+                        quantityValue.textContent = currentValue + 1;
+                    });
+                });
+            });
+        </script>
+
+    </main>
+</body>
+
+</html>
