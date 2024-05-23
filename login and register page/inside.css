@@ -193,7 +193,8 @@ main .restaurant-photo img {
     display: flex;
     justify-content: space-between;
     margin-left: 10vw;
-	margin-bottom: 10vw;
+	margin-top: 5vw;
+	margin-bottom: 5vw;
 }
 
 main .restaurant-photo .info-text {
