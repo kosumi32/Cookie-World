@@ -111,12 +111,6 @@ main .gallery .object{
 	text-align: left;
 }
 
-main .gallery .object .quantity{
-	display: flex;
-	justify-content: right;
-	margin: 20px;
-}
-
 main .gallery{
 	display: flex;
 	justify-content: space-around;
@@ -125,11 +119,15 @@ main .gallery{
 
 main .gallery .object img{
 	border-radius: 10px;
+	width: 25vw;
+	height: 16vw;
 }
 
 .quantity {
 	display: flex;
 	align-items: center;
+	justify-content: right;
+	margin: 20px;
 }
 
 .quantity button {
