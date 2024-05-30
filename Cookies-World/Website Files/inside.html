@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookies List</title>
+  <link rel="stylesheet" href="css/inside.css">
+</head>
+<body>
+  <header>
+    <h2 class="logo">Cookie World</h2>
+    <nav class="navigation">
+      <a href="landingPage.html">Home</a>
+      <a href="howToUse.html">How To Use</a>
+      <a href="about.html">About</a>
+      <a href="displayCards.html">Profile</a>
+      <svg class="icon-cart" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+        <path fill-rule="evenodd" d="M14 7h-4v3a1 1 0 0 1-2 0V7H6a1 1 0 0 0-.997.923l-.917 11.924A2 2 0 0 0 6.08 22h11.84a2 2 0 0 0 1.994-2.153l-.917-11.924A1 1 0 0 0 18 7h-2v3a1 1 0 1 1-2 0V7Zm-2-3a2 2 0 0 0-2 2v1H8V6a4 4 0 0 1 8 0v1h-2V6a2 2 0 0 0-2-2Z" clip-rule="evenodd"/>
+      </svg>
+      <span>0</span>
+    </nav>
+  </header>
+  
+  <div class="container">
+    <!-- Product Listings -->
+    <div class="listProduct">
+      <div class="item">
+        <a href="detail.html">
+          <img src="images/cookies/1.png" alt="Product 1">
+        </a>
+        <h2>Hot Chocolate Cookie</h2>
+        <div class="price">$10.00</div>
+        <button class="addCart" data-id="1">Add To Cart</button>
+      </div>
+      <div class="item">
+        <a href="detail.html">
+          <img src="images/cookies/2.png" alt="Product 2">
+        </a>
+        <h2>Chocolate Chip Cookie</h2>
+        <div class="price">$12.00</div>
+        <button class="addCart" data-id="2">Add To Cart</button>
+      </div>
+      <div class="item">
+        <a href="detail.html">
+          <img src="images/cookies/3.png" alt="Product 3">
+        </a>
+        <h2>Oatmeal Raisin Cookie</h2>
+        <div class="price">$8.00</div>
+        <button class="addCart" data-id="3">Add To Cart</button>
+      </div>
+      <div class="item">
+        <a href="detail.html">
+          <img src="images/cookies/4.png" alt="Product 3">
+        </a>
+        <h2>Snickerdoodle</h2>
+        <div class="price">$89.00</div>
+        <button class="addCart" data-id="4">Add To Cart</button>
+      </div>
+      <div class="item">
+        <a href="detail.html">
+          <img src="images/cookies/5.png" alt="Product 3">
+        </a>
+        <h2>Peanut Butter Cookie</h2>
+        <div class="price">$77.00</div>
+        <button class="addCart" data-id="5">Add To Cart</button>
+      </div>
+      <div class="item">
+        <a href="detail.html">
+          <img src="images/cookies/6.png" alt="Product 3">
+        </a>
+        <h2>Gingerbread Cookie</h2>
+        <div class="price">$8.00</div>
+        <button class="addCart" data-id="6">Add To Cart</button>
+      </div>
+      <div class="item">
+        <a href="detail.html">
+          <img src="images/cookies/7.png" alt="Product 3">
+        </a>
+        <h2>Sugar Cookie</h2>
+        <div class="price">$78.00</div>
+        <button class="addCart" data-id="7">Add To Cart</button>
+      </div>
+      <div class="item">
+        <a href="detail.html">
+          <img src="images/cookies/8.png" alt="Product 3">
+        </a>
+        <h2>Macaron</h2>
+        <div class="price">$48.00</div>
+        <button class="addCart" data-id="8">Add To Cart</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- CartTab -->
+  <div class="cartTab">
+    <h1>Shopping Cart</h1>
+    <!-- Items in shopping cart stored -->
+    <div class="listCart">show item here</div>
+    <div class="btn">
+      <button class="close">CLOSE</button>
+      <button class="checkOut">Check Out</button>
+    </div>
+  </div>
+  
+  <!-- Phoo Parts -->
+  <div class="review">
+    <div class="title"><b>Review</b></div>
+    <h2><u>Most Popular</u></h2>
+    <div class="commentSection">
+      <p>User1 : MaMaMia Facilitó</p>
+      <p>User1 : MaMaMia Facilitó</p>
+      <p>User1 : MaMaMia Facilitó</p>
+      <p>User1 : MaMaMia Facilitó</p>
+      <p>User1 : MaMaMia Facilitó</p>
+    </div>
+    <h2><u>Latest Reviews</u></h2>
+    <div class="latestReviews">
+      <p>User1 : MaMaMia Facilitó</p>
+      <p>User1 : MaMaMia Facilitó</p>
+      <p>User1 : MaMaMia Facilitó</p>
+      <p>User1 : MaMaMia Facilitó</p>
+      <p>User1 : MaMaMia Facilitó</p>
+    </div>
+  </div>
+  
+  <div class="restaurant-photo"> <img src="images/he&she.jpg" alt="hnscafe photo">
+    <div class="info-text">
+      <h3>He & She Cafe</h3>
+      <h3>Address: He & She Coffee UPM, Persiaran Tulang Daing Seri Kembangan, 43400 Serdang, Selangor</h3>
+      <h3>Instagram: <a target="_blank" href="https://www.instagram.com/heandshecoffeeupm/">heandshecoffeeupm</a>
+      </h3>
+      <h3>Phone: 019-3923019</h3>
+    </div>
+  </div>
+  
+  <script src="js/cart.js" type="module"></script>
+  <script src="js/index.js" type="module"></script>
+  <script>
+    // Add event listeners to all "Add to Cart" buttons
+    const addToCartButtons = document.querySelectorAll('.addCart');
+    addToCartButtons.forEach(button => {
+      button.addEventListener('click', addToCart);
+    });
+
+    function addToCart(event) {
+      // Retrieve the product ID from the data-id attribute
+      const productId = event.target.getAttribute('data-id');
+      
+      // Call your add to cart function from cart.js with the productId
+      // Example: addToCartFunction(productId);
+    }
+  </script>
+</body>
+</html>

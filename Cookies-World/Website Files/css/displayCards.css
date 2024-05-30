@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #290A2C;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+/*	left: 0;*/
+	width: 100%;
+	padding: 20px;
+/*	background: red;*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	backdrop-filter: blur(2px);
+	/*background-color: #6c432f;  Added for clarity, can change */
+	background: linear-gradient(45deg, rgb(66, 15, 114), rgb(175, 31, 108))
+}
+
+.logo {
+	font-size: 30px;
+	color: #fff;
+
+/*	Prevent text selection*/
+	user-select: none;
+}
+
+.navigation a {
+	position: relative;
+	font-size: 1.1em;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 35px;
+}
+
+.navigation a::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+/*	border-radius: 5px;*/
+	left: 0;
+	bottom: -5px;
+
+/*	a: Starting position of the line is at 0*/
+	transform: scaleX(0);
+	transition: transform .5s;
+	transform-origin: right;
+}
+
+/*  b: Then change to 1*/
+.navigation a:hover::after {
+	transform-origin: left;
+	transform: scaleX(1);
+}
+
+.navigation .btnLogin-popip {
+	width: 120px;
+	height: 45px;
+	background: transparent;
+	border: 1.5px solid #fff;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1.1em;
+	color: #fff;
+	font-weight: 500;
+	margin-left: 35px;
+	text-decoration: none;
+	/*Animation time*/
+	transition: .5s;
+}
+
+.navigation .btnLogin-popip:hover {
+	background: #fff;
+	color: #162938;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20;
+    padding-top: 100px;
+}
+
+.user-info {
+    margin-top: 10px;
+}
+
+.user-info h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    font-weight: 800;
+}
+
+.user-info p {
+    margin: 10px 0;
+}
+
+.history{
+	width:max-content;
+	height:max-content;
+	background: #ffffff;
+	border: 1.5px solid #fff;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-top: 30px;
+}
+
+.history a{
+	position: relative;
+	font-size: 1.1em;
+	color: #000000;
+	text-decoration: none;
+	font-weight: 900;
+	padding: 20px;
+}
+
+.payment-section {
+    margin-top: 50px;
+}
+
+.payment-section h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+#add-card-btn{
+	display: flex;
+	padding: 10;
+	background: #9a4ea1;
+	border: none;
+	border-radius: 10px;
+	font-family: "Quicksand", sans-serif;
+	font-size: 18px;
+	font-weight: 700;
+    margin: 10px, 0px;
+    color: #F0F0F0;
+}
+
+.remove-card-btn{
+    color: #290A2C;
+    border: none;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.saved-card {
+    background-color: #F0F0F0;
+    color: #290A2C;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.saved-card p {
+    margin: 0;
+}

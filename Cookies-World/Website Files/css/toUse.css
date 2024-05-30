@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #eeeeea;
+}
+header {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+/*	left: 0;*/
+	width: 100%;
+	padding: 20px;
+/*	background: red;*/
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	backdrop-filter: blur(2px);
+	/*background-color: #6c432f;  Added for clarity, can change */
+	background: linear-gradient(45deg, rgb(66, 15, 114), rgb(175, 31, 108))
+}
+
+.logo {
+	font-size: 30px;
+	color: #fff;
+
+/*	Prevent text selection*/
+	user-select: none;
+}
+
+.navigation a {
+	position: relative;
+	font-size: 1.1em;
+	color: #fff;
+	text-decoration: none;
+	font-weight: 500;
+	margin-left: 35px;
+}
+
+.navigation a::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background: #fff;
+/*	border-radius: 5px;*/
+	left: 0;
+	bottom: -5px;
+
+/*	a: Starting position of the line is at 0*/
+	transform: scaleX(0);
+	transition: transform .5s;
+	transform-origin: right;
+}
+
+/*  b: Then change to 1*/
+.navigation a:hover::after {
+	transform-origin: left;
+	transform: scaleX(1);
+}
+
+.navigation .btnLogin-popip {
+	width: 120px;
+	height: 45px;
+	background: transparent;
+	border: 1.5px solid #fff;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 1.1em;
+	color: #fff;
+	font-weight: 500;
+	margin-left: 35px;
+	text-decoration: none;
+	/*Animation time*/
+	transition: .5s;
+}
+
+.navigation .btnLogin-popip:hover {
+	background: #fff;
+	color: #162938;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.card[for="c1"] {
+    background-image: url('../images/step/step3.jpg');
+}
+.card[for="c2"] {
+    background-image: url('../images/step/step2.jpg');
+}
+.card[for="c3"] {
+    background-image: url('../images/step/step1.jpg');
+}
+.card[for="c4"] {
+    background-image: url('../images/step/step4.jpg');
+}
+.card[for="c5"] {
+    background-image: url('../images/step/step6.jpg');
+}
+.card[for="c6"] {
+    background-image: url('../images/step/step5.jpg');
+}
+.card[for="c7"] {
+    background-image: url('../images/step/step7.jpeg');
+}
+.card[for="c8"] {
+    background-image: url('../images/step/step8.jpeg');
+}
