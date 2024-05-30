@@ -211,3 +211,17 @@ body{
     background: #ababab;
     color: #fff;
 }
+
+/* mouse trailer */
+.trailer {
+    position: fixed;
+    width: 20px;
+    height: 20px; 
+    background-color: chartreuse;
+    border-radius: 50%;
+    z-index: 100000;
+    pointer-events: none; /* Make the element non-interactive */
+    transition: opacity 500ms ease;
+    opacity: 0; /* Initially hidden */
+	background-image: linear-gradient(to right bottom, #fdfa77, #ffcd48, #ff9c2b, #f96627, #eb1233);
+}
