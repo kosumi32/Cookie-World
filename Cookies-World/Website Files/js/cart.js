@@ -38,7 +38,7 @@ const cart = () => {
         // Function the display data on shopping cart
         refreshCartHTML();
     }
-    
+
     const refreshCartHTML = () => {
         let listHTML = document.querySelector(".listCart");
         let totalHTML = document.querySelector(".icon-cart span");
@@ -48,14 +48,14 @@ const cart = () => {
         listHTML.innerHTML = null;
         cart.forEach(item => {
             totalQuantity = totalQuantity + item.quantity;
-    
+
             let position = products.findIndex((value) => value.id == item.product_id);
             let info = products[position];
             let newITem = document.createElement("div");
             newITem.classList.add("item");
             newITem.innerHTML =
-            // <div class= "image"> to go to detail page
-            `
+                // <div class= "image"> to go to detail page
+                `
                     <div class= "image">
                             <img src="${info.image}" />
                         </div>
@@ -70,19 +70,35 @@ const cart = () => {
                             <span class="plus" data-id="${info.id}">+</span>
                         </div>
                     `;
-    
+
             listHTML.appendChild(newITem);
         })
         totalHTML.innerText = totalQuantity;
     }
-    
+
+    // clear cart
+    document.getElementById('clearCart').addEventListener('click', () => {
+        const userConfirmed = confirm('Are you sure you want to clear your cart? This action cannot be undone.');
+
+        if (userConfirmed) {
+            clearCart();
+            alert('Your cart has been cleared.');
+        }
+    });
+
+    const clearCart = () => {
+        cart = [];
+        localStorage.removeItem('cart');
+        refreshCartHTML();
+    };
+
     // event click
     document.addEventListener('click', (event) => {
         let buttonClick = event.target;
         let idProduct = buttonClick.dataset.id;
         let position = cart.findIndex((value) => value.product_id == idProduct);
         let quantity = position < 0 ? 0 : cart[position].quantity;
-    
+
         if (buttonClick.classList.contains("addCart") || buttonClick.classList.contains("plus")) {
             quantity++;
             setProductInCart(idProduct, quantity, position);
@@ -92,7 +108,7 @@ const cart = () => {
         }
     })
 
-    
+
     // Retain data even turn off computer/ browser
     const initApp = () => {
         // If shoppingCart data exits in client
