@@ -491,3 +491,6 @@ body.activeTabCart .container {
     /* Initially hidden */
     background-image: linear-gradient(to right bottom, #fdfa77, #ffcd48, #ff9c2b, #f96627, #eb1233);
 }
+.speReq{
+    margin: 0 20%;
+}

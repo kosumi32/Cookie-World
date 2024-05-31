@@ -55,9 +55,17 @@
     <div class="payment-method">
       <label for="savedCardsDropdown">Payment Details</label>
       <select id="savedCardsDropdown">
-          <!-- Options will be populated by JavaScript -->
+        <!-- Options will be populated by JavaScript -->
       </select>
     </div>
+
+    <!--Dropdown for specific request-->
+    <label for="speReq" class="speReq">Add a specific request</label>
+    <input list="Request" id="speReq" name="speReq" class="speReq" />
+    <datalist id="Request">
+      <option value="Less Sugar"></option>
+      <option value="No peanuts"></option>
+    </datalist>
 
     <div class="btn">
       <button id="clearCart">Clear Cart</button>
