@@ -1,3 +1,5 @@
+let currentIndex = 0;
+var popup = document.getElementById("myModal");
 document.addEventListener('DOMContentLoaded', function() {
     displayCards();
 });
@@ -27,13 +29,30 @@ function displayCards() {
                 <p>${card.expMonth}/${card.expYear}</p>
             </div>
             <div class='remove-card-btn'>
-                <button onclick="removeCard(${index})">Remove</button>
+                <button onclick="runPopup(${index})">Remove</button>
             </div>
         `;
 
         savedCardsDiv.appendChild(cardDiv);
     });
 }
+function runPopup(index){
+currentIndex = index;
+popup.style.display = "block";
+}
+document.getElementById("btnYes").onclick = function() {
+    removeCard(currentIndex);
+    popup.style.display = "none";
+  }
+
+document.getElementById("btnNo").onclick = function() {
+    popup.style.display = "none";
+  }
+window.onclick = function(event) {
+    if (event.target == popup) {
+      popup.style.display = "none";
+    }
+  }
 
 function removeCard(index) {
     let cards = JSON.parse(localStorage.getItem('cards')) || [];

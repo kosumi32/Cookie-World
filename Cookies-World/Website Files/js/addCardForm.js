@@ -62,6 +62,7 @@ document.getElementById('cardForm').addEventListener('submit', function(e) {
     };
 
     saveCard(cardDetails);
+    location.assign("displayCards.html")
 });
 
 function saveCard(card) {
