@@ -18,9 +18,9 @@ const cart = () => {
     const populateSavedCardsDropdown = () => {
         let cards = JSON.parse(localStorage.getItem('cards')) || [];
         let dropdown = document.getElementById('savedCardsDropdown');
-    
+
         dropdown.innerHTML = ''; // Clear existing options
-    
+
         cards.forEach((card, index) => {
             let option = document.createElement('option');
             option.value = index;
@@ -92,7 +92,7 @@ const cart = () => {
 
     // clear cart
     document.getElementById('clearCart').addEventListener('click', () => {
-        const userConfirmed = confirm('Are you sure you want to clear your cart? This action cannot be undone.');
+        const userConfirmed = confirm('Are you sure you want to clear your cart?');
 
         if (userConfirmed) {
             clearCart();
