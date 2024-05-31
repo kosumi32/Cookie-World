@@ -1,61 +1,61 @@
 /* Cookies World Header */
 
 body {
-	color: black;
+    color: black;
 }
 
 .title .headerContainer {
-	/* position: fixed; */
-	top: 0;
-	left: 0;
-	width: 100%;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 50px;
-	padding: 20px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	backdrop-filter: blur(2px);
-	/* background: linear-gradient(45deg, rgb(66, 15, 114), rgb(175, 31, 108)); */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(2px);
+    /* background: linear-gradient(45deg, rgb(66, 15, 114), rgb(175, 31, 108)); */
 }
 
 
 .logo {
-	font-size: 40px;
-	color: #000000;
+    font-size: 40px;
+    color: #000000;
 
-	/*	Prevent text selection*/
-	user-select: none;
+    /*	Prevent text selection*/
+    user-select: none;
 }
 
 .navigation a {
-	position: relative;
-	font-size: 20px;
-	color: #000000;
-	text-decoration: none;
-	font-weight: 500;
-	margin-left: 35px;
+    position: relative;
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
 }
 
 .navigation a::after {
-	content: '';
-	position: absolute;
-	width: 100%;
-	height: 2px;
-	background: plum;
-	/*	border-radius: 5px;*/
-	left: 0;
-	bottom: -5px;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: plum;
+    /*	border-radius: 5px;*/
+    left: 0;
+    bottom: -5px;
 
-	/*	a: Starting position of the line is at 0*/
-	transform: scaleX(0);
-	transition: transform .5s;
-	transform-origin: right;
+    /*	a: Starting position of the line is at 0*/
+    transform: scaleX(0);
+    transition: transform .5s;
+    transform-origin: right;
 }
 
 /*  b: Then change to 1*/
 .navigation a:hover::after {
-	transform-origin: left;
-	transform: scaleX(1);
+    transform-origin: left;
+    transform: scaleX(1);
 }
 
 .navbar-brand {
@@ -130,7 +130,7 @@ header {
 .title {
     font-size: 45px;
     margin-bottom: 15px;
-    
+
 }
 
 /* cartTab */
@@ -160,7 +160,7 @@ header {
 
 .cartTab .btn {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .cartTab .btn button {
@@ -205,9 +205,7 @@ body.activeTabCart .container {
     width: 90%;
 
     /* Make a shadow effect */
-    filter: drop-shadow(
-        0 50px 20px #0009
-    );
+    filter: drop-shadow(0 50px 20px #0009);
 }
 
 .listProduct {
@@ -238,7 +236,7 @@ body.activeTabCart .container {
     background-color: rgb(54, 46, 46);
     color: white;
     border: none;
-    padding:  5px 15px;
+    padding: 5px 15px;
     margin-top: 17.5px;
     border-radius: 25px;
 }
@@ -265,7 +263,7 @@ body.activeTabCart .container {
     width: 25px;
     height: 25px;
     background-color: #eeeee6;
-    color:black;
+    color: black;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -290,7 +288,7 @@ body.activeTabCart .container {
     text-align: left;
 }
 
-.detail .image img{
+.detail .image img {
     width: 100%;
 }
 
@@ -314,7 +312,7 @@ body.activeTabCart .container {
     top: 50px;
 }
 
-.detail .name{
+.detail .name {
     font-size: 45px;
     padding-top: 40px;
     margin-bottom: 15px;
@@ -395,46 +393,46 @@ body.activeTabCart .container {
 
 /* Phoo Part */
 .review {
-	margin-left: 10px;
-	margin-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 
 }
 
 .review .title {
-	margin-top: 100px;
-	padding-left: 10px;
-	margin-bottom: 50px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	border-left: 8px solid;
-	background-color: rgb(205, 188, 221);
-	border-color: rgb(66, 15, 114);
-	font-size: 2vw;
+    margin-top: 100px;
+    padding-left: 10px;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 8px solid;
+    background-color: rgb(205, 188, 221);
+    border-color: rgb(66, 15, 114);
+    font-size: 2vw;
 }
 
 .review h2 {
-	margin: 20px;
+    margin: 20px;
 }
 
 .review p {
-	background-color: rgb(235, 213, 255);
-	border-radius: 10px;
-	padding: 10px;
-	margin: 20px
+    background-color: rgb(235, 213, 255);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px
 }
 
-.review .commentSection{
-	background-color: rgb(66, 15, 114);
-	border-radius: 10px;
-	padding: 10px;
-	margin: 10px;
+.review .commentSection {
+    background-color: rgb(66, 15, 114);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
 }
 
-.review .latestReviews{
-	background-color: rgb(66, 15, 114);
-	border-radius: 10px;
-	padding: 10px;
-	margin: 10px;
+.review .latestReviews {
+    background-color: rgb(66, 15, 114);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
 }
 
 .restaurant-photo img {
@@ -445,8 +443,8 @@ body.activeTabCart .container {
     display: flex;
     justify-content: space-between;
     margin-left: 10vw;
-	margin-top: 5vw;
-	margin-bottom: 5vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
 }
 
 .restaurant-photo .info-text {
@@ -459,12 +457,14 @@ body.activeTabCart .container {
 .trailer {
     position: fixed;
     width: 20px;
-    height: 20px; 
+    height: 20px;
     background-color: chartreuse;
     border-radius: 50%;
     z-index: 100000;
-    pointer-events: none; /* Make the element non-interactive */
+    pointer-events: none;
+    /* Make the element non-interactive */
     transition: opacity 500ms ease;
-    opacity: 0; /* Initially hidden */
-	background-image: linear-gradient(to right bottom, #fdfa77, #ffcd48, #ff9c2b, #f96627, #eb1233);
+    opacity: 0;
+    /* Initially hidden */
+    background-image: linear-gradient(to right bottom, #fdfa77, #ffcd48, #ff9c2b, #f96627, #eb1233);
 }
