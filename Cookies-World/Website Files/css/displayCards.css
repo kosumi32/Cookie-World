@@ -22,6 +22,71 @@ header {
 	background: linear-gradient(45deg, rgb(66, 15, 114), rgb(175, 31, 108))
 }
 
+
+/* clocl start */
+.datetime{
+	flex: 0.5;
+	color: #fff;
+	background: #10101e;
+	font-family: "Segoe UI", sans-serif;
+	width: 100%;
+	padding: 5px 1px;
+	border: 3px solid #2E94E3;
+	border-radius: 5px;
+	position: relative;
+	transition: 0.5s;
+	transition-property: background, box-shadow;
+}
+
+.datetime:hover{
+	background: #2E94E3;
+	box-shadow: 0 0 30px #2E94E3;
+}
+
+.date{
+	font-size: 10px;
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.time{
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.time span:not(:last-child){
+	position: relative;
+	margin: 0 6px;
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+.time span:last-child{
+	background: #2E94E3;
+	font-size: 10px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-top: 5px;
+	padding: 0 5px;
+	border-radius: 3px;
+}
+/* clock end */
+
+.header1{
+	width: 400px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
 .logo {
 	font-size: 30px;
 	color: #fff;

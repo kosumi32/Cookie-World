@@ -8,9 +8,31 @@
     <link rel="stylesheet" href="css/toUse.css">
 </head>
 
-<body>
+<body onload="initClock()">
     <header>
-        <h2 class="logo">Cookie World</h2>
+        <div class="header1">
+            <h2 class="logo">Cookie World</h2>
+
+            <!-- digital clock start -->
+
+            <div class="datetime">
+                <div class="date">
+                    <span id="dayname">Day</span>,
+                    <span id="month">Month</span>
+                    <span id="daynum">00</span>,
+                    <span id="year">Year</span>
+                </div>
+                <div class="time">
+                    <span id="hour">00</span>:
+                    <span id="minutes">00</span>:
+                    <span id="seconds">00</span>
+                    <span id="period">AM</span>
+                </div>
+            </div>
+
+            <!-- digital clock end -->
+        </div>
+
         <nav class="navigation">
             <a href="landingPage.html">Home</a>
             <a href="howToUse.html">How To Use</a>

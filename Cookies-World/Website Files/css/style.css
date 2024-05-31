@@ -12,18 +12,18 @@ body {
 	align-items: center;
 	min-height: 100vh;
 	background: url("../images/background.jpg");
-/*	background-size: cover;*/
-/*	background-position: center;*/
+	/*	background-size: cover;*/
+	/*	background-position: center;*/
 }
 
 header {
 	position: fixed;
 	z-index: 2;
 	top: 0;
-/*	left: 0;*/
+	/*	left: 0;*/
 	width: 100%;
 	padding: 20px;
-/*	background: red;*/
+	/*	background: red;*/
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -32,11 +32,78 @@ header {
 	background: linear-gradient(45deg, rgb(66, 15, 114), rgb(175, 31, 108))
 }
 
+
+/* clocl start */
+.datetime {
+	flex: 0.5;
+	color: #fff;
+	background: #10101e;
+	font-family: "Segoe UI", sans-serif;
+	width: 100%;
+	padding: 5px 1px;
+	border: 3px solid #2E94E3;
+	border-radius: 5px;
+	position: relative;
+	transition: 0.5s;
+	transition-property: background, box-shadow;
+}
+
+.datetime:hover {
+	background: #2E94E3;
+	box-shadow: 0 0 30px #2E94E3;
+}
+
+.date {
+	font-size: 10px;
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.time {
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.time span:not(:last-child) {
+	position: relative;
+	margin: 0 6px;
+	font-weight: 600;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+.time span:last-child {
+	background: #2E94E3;
+	font-size: 10px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-top: 5px;
+	padding: 0 5px;
+	border-radius: 3px;
+}
+
+/* clock end */
+
+.header1 {
+	width: 400px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+
 .logo {
 	font-size: 30px;
 	color: #fff;
 
-/*	Prevent text selection*/
+	/*	Prevent text selection*/
 	user-select: none;
 }
 
@@ -55,11 +122,11 @@ header {
 	width: 100%;
 	height: 2px;
 	background: #fff;
-/*	border-radius: 5px;*/
+	/*	border-radius: 5px;*/
 	left: 0;
 	bottom: -5px;
 
-/*	a: Starting position of the line is at 0*/
+	/*	a: Starting position of the line is at 0*/
 	transform: scaleX(0);
 	transition: transform .5s;
 	transform-origin: right;
@@ -115,10 +182,10 @@ header {
 }
 
 .wrapper .input-box {
-/*	padding: 15px;*/
+	/*	padding: 15px;*/
 	width: 100%;
 	height: 55px;
-/*	background: darksalmon;*/
+	/*	background: darksalmon;*/
 	margin: 30px 0;
 
 	position: relative;
@@ -169,13 +236,13 @@ header {
 .remember-forgot a {
 	color: #fff;
 
-/*	Remove the underline*/
+	/*	Remove the underline*/
 	text-decoration: none;
 }
 
 .remember-forgot a:hover {
 	text-decoration: underline;
-} 
+}
 
 .wrapper .btn {
 	width: 100%;
@@ -194,7 +261,7 @@ header {
 .wrapper .register-link {
 	font-size: 13.5px;
 	text-align: center;
-/*	margin-top: 20px;*/
+	/*	margin-top: 20px;*/
 	margin: 20px 0 17.5px;
 }
 
@@ -204,7 +271,7 @@ header {
 	font-weight: 600;
 }
 
-.register-link p a:hover{
+.register-link p a:hover {
 	text-decoration: underline;
 }
 
@@ -215,14 +282,16 @@ header {
 
 /* mouse trailer */
 .trailer {
-    position: fixed;
-    width: 20px;
-    height: 20px; 
-    background-color: chartreuse;
-    border-radius: 50%;
-    z-index: 100000;
-    pointer-events: none; /* Make the element non-interactive */
-    transition: opacity 500ms ease;
-    opacity: 0; /* Initially hidden */
+	position: fixed;
+	width: 20px;
+	height: 20px;
+	background-color: chartreuse;
+	border-radius: 50%;
+	z-index: 100000;
+	pointer-events: none;
+	/* Make the element non-interactive */
+	transition: opacity 500ms ease;
+	opacity: 0;
+	/* Initially hidden */
 	background-image: linear-gradient(to right bottom, #fdfa77, #ffcd48, #ff9c2b, #f96627, #eb1233);
 }
