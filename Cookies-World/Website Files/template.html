@@ -50,10 +50,19 @@
 
     <!-- Items in shopping cart stored -->
     <div class="listCart">show item here</div>
+
+    <!-- Dropdown for selecting saved cards -->
+    <div class="payment-method">
+      <label for="savedCardsDropdown">Payment Details</label>
+      <select id="savedCardsDropdown">
+          <!-- Options will be populated by JavaScript -->
+      </select>
+    </div>
+
     <div class="btn">
       <button id="clearCart">Clear Cart</button>
-      <button class="close">CLOSE</button>
-      <button class="checkOut">Check Out</button>
+      <button class="close">Close</button>
+      <button class="checkOut" onclick="location.href = 'order_restraunt_page.html';">Check Out</button>
     </div>
   </div>
 
