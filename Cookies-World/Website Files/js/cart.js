@@ -15,6 +15,20 @@ const cart = () => {
         body.classList.toggle("activeTabCart");
     })
 
+    const populateSavedCardsDropdown = () => {
+        let cards = JSON.parse(localStorage.getItem('cards')) || [];
+        let dropdown = document.getElementById('savedCardsDropdown');
+    
+        dropdown.innerHTML = ''; // Clear existing options
+    
+        cards.forEach((card, index) => {
+            let option = document.createElement('option');
+            option.value = index;
+            option.textContent = `${card.cardHolder} - ${card.cardNumber}`;
+            dropdown.appendChild(option);
+        });
+    };
+
     const setProductInCart = (idProduct, quantity, position) => {
         if (quantity > 0) {
             if (position < 0) {
@@ -116,6 +130,7 @@ const cart = () => {
             cart = JSON.parse(localStorage.getItem("cart"));
         }
         refreshCartHTML();
+        populateSavedCardsDropdown();
     }
     initApp();
 }
