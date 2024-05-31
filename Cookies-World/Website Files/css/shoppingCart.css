@@ -161,6 +161,7 @@ header {
 .cartTab .btn {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding-top: 10px;
 }
 
 .cartTab .btn button {
@@ -168,11 +169,33 @@ header {
     border: none;
     font-family: Poppins;
     font-weight: 500;
+    padding: 15px 20px;
+    font-size: 16px;
 }
 
 /* First button */
 .cartTab .btn button.close {
     background-color: azure;
+}
+
+/* Payment method section */
+.payment-method {
+    text-align: center;
+}
+
+.payment-method label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.payment-method select {
+    width: 90%;
+    padding: 7px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto; /* Center the select element */
+    display: block;
 }
 
 .cartTab .listCart {
