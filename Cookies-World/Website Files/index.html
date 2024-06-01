@@ -28,7 +28,11 @@
 			<h1>Login to the <i>Cookie World</i></h1>
 
 			<div class="input-box">
-				<input type="text" name="username" placeholder="UserName" required>
+				<input type="text" name="username" placeholder="UserName" required 
+				minlength="5"
+				pattern="/.*[0-9].*/"
+				title="Username must be at least 5 characters and include a number"
+				>
 
 				<!-- imported icon -->
 				<i class='bx bxs-user'></i>

@@ -95,3 +95,18 @@ window.onload = initClock;
 
 
 // clock end
+
+
+// Print the page
+function printOrders() {
+	var printContents = document.querySelectorAll('.orderBlock');
+	var originalContents = document.body.innerHTML;
+	var newContent = '';
+	
+	printContents.forEach(function(orderBlock) {
+		newContent += orderBlock.outerHTML;
+	})
+	document.body.innerHTML = newContent;
+	window.print();
+	document.body.innerHTML = originalContents;
+}
