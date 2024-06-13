@@ -418,7 +418,6 @@ body.activeTabCart .container {
 .review {
     margin-left: 10px;
     margin-right: 10px;
-
 }
 
 .review .title {
@@ -493,4 +492,23 @@ body.activeTabCart .container {
 }
 .speReq{
     margin: 0 20%;
+}
+
+.ReviewInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+ 
+   border: solid black 5px;
+}
+input {
+    width: 10vw;
+    padding: 6px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+.Content {
+    width: 90vw;
+    height: 10vw; 
 }
