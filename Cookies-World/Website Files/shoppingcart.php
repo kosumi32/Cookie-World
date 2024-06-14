@@ -3,7 +3,7 @@ include 'shoppingCart.html';
 $servername = "localhost";
 $username = "root"; // Replace with your MySQL username
 $password = '';     // Replace with your MySQL password
-$dbname = "cookieworld";
+$dbname = "Cookies-World";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
