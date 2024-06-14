@@ -96,29 +96,3 @@ window.onload = initClock;
 
 
 // clock end
-
-document.addEventListener("DOMContentLoaded", () => {
-    let currentIndex = 0;
-    const slides = document.querySelector(".slides");
-    const slideImages = document.querySelectorAll(".slides img");
-
-    function showNextSlide() {
-        currentIndex++;
-        if (currentIndex >= slideImages.length) {
-            currentIndex = 0;
-        }
-        slides.style.transform = `translateX(${-currentIndex * 100}%)`;
-    }
-
-    setInterval(showNextSlide, 3000);
-});
-
-// Show snackbar message
-var statusMessage = "<?php echo $statusMessage; ?>";
-if (statusMessage !== '') {
-    var snackbar = document.getElementById("snackbar");
-    snackbar.className = "show";
-    setTimeout(function () {
-        snackbar.className = snackbar.className.replace("show", "");
-    }, 3000); // 3 seconds
-}
