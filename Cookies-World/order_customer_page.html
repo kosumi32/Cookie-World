@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/shoppingCart.css" />
+	<link rel="stylesheet" href="css/style-order-history.css">
+</head>
+
+<body onload="initClock()">
+	<!-- All website data store -->
+	<div class="container">
+		<header>
+			<div class="headerContainer">
+				<h3 class="logo">Cookie World</h3>
+				<nav class="navigation">
+					<a href="landingPage.html">Home</a>
+					<a href="howToUse.html">How to use</a>
+					<a href="about.html">About</a>
+					<a href="displayCards.html">Profile</a>
+				</nav>
+				<!-- Cart Icon -->
+				<div class="icon-cart">
+					<svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+						xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+						viewBox="0 0 24 24">
+						<path fill-rule="evenodd"
+							d="M14 7h-4v3a1 1 0 0 1-2 0V7H6a1 1 0 0 0-.997.923l-.917 11.924A2 2 0 0 0 6.08 22h11.84a2 2 0 0 0 1.994-2.153l-.917-11.924A1 1 0 0 0 18 7h-2v3a1 1 0 1 1-2 0V7Zm-2-3a2 2 0 0 0-2 2v1H8V6a4 4 0 0 1 8 0v1h-2V6a2 2 0 0 0-2-2Z"
+							clip-rule="evenodd" />
+					</svg>
+					<!-- display no of product -->
+					<span>0</span>
+				</div>
+				<a class="btn-login" href="login.html">Login</a>
+			</div>
+		</header>
+
+		<h2 class="title">History</h2>
+
+		<div class="orderBlock">
+
+			<h3 class="order-id">#Order0001</h3>
+			<h4 class="order-time">2024-05-10 11:32:55</h4><br>
+			<h4 class="restraunt-name">HE & SHE CAFE</h4>
+
+			<h4 class="email">Email:</h4>
+			<h4 class="order-email">eugene12@gmail.com</h4>
+			<h4 class="order">Order:</h4>
+			<table>
+				<tr>
+					<td class="item-name">Red Velvet Cookies</td>
+					<td class="quantity">x 1</td>
+					<td class="item-price">RM 8.00</td>
+				</tr>
+				<tr>
+					<td class="item-name">Dark Chocolate Cookies</td>
+					<td class="quantity">x 2</td>
+					<td class="item-price">RM 16.00</td>
+				</tr>
+				<tr>
+					<td>
+						<h4>Total:</h4>
+					<td> </td>
+					<td>
+						<h4>RM 24.00</h4>
+					</td>
+					</td>
+				</tr>
+			</table>
+			<h4 class="status">Status: Delivered</h4>
+		</div>
+
+		<div class="orderBlock">
+
+			<h3 class="order-id">#Order0002</h3>
+			<h4 class="order-time">2024-05-23 12:37:54</h4><br>
+			<h4 class="restraunt-name">HE & SHE CAFE</h4>
+
+			<h4 class="email">Email:</h4>
+			<h4 class="order-email">phoo92@gmail.com</h4>
+			<h4 class="order">Order:</h4>
+			<table>
+				<tr>
+					<td class="item-name">Sweet Cookies</td>
+					<td class="quantity">x 1</td>
+					<td class="item-price">RM 9.00</td>
+				</tr>
+				<tr>
+					<td class="item-name">Strawberry Dream Cookies</td>
+					<td class="quantity">x 2</td>
+					<td class="item-price">RM 24.00</td>
+				</tr>
+				<tr>
+					<td>
+						<h4>Total:</h4>
+					<td> </td>
+					<td>
+						<h4>RM 33.00</h4>
+					</td>
+					</td>
+				</tr>
+			</table>
+			<h4 class="status">Status: Cancelled By Seller</h4>
+		</div>
+
+		<!-- Print button -->
+		<button class="printOrders" onclick="printOrders()">Print Orders</button>
+
+		<!-- mouse trailer -->
+		<div class="trailer"></div>
+		<div class="trailer"></div>
+		<div class="trailer"></div>
+		<div class="trailer"></div>
+		<div class="trailer"></div>
+		<div class="trailer"></div>
+		<div class="trailer"></div>
+		<div class="trailer"></div>
+		<div class="trailer"></div>
+		<div class="trailer"></div>
+		<div class="trailer"></div>
+	</div>
+
+	<!-- CartTab -->
+	<div class="cartTab">
+		<h1>Shopping Cart</h1>
+
+		<!-- Items in shopping cart stored -->
+		<div class="listCart">show item here</div>
+
+		<!-- Dropdown for selecting saved cards -->
+		<div class="payment-method">
+			<label for="savedCardsDropdown">Payment Details</label>
+			<select id="savedCardsDropdown">
+				<!-- Options will be populated by JavaScript -->
+			</select>
+		</div>
+
+		<!--Dropdown for specific request-->
+		<label for="speReq" class="speReq">Add a specific request</label>
+		<input list="Request" id="speReq" name="speReq" class="speReq" />
+		<datalist id="Request">
+			<option value="Less Sugar"></option>
+			<option value="No peanuts"></option>
+		</datalist>
+
+		<div class="btn">
+			<button id="clearCart">Clear Cart</button>
+			<button class="close">Close</button>
+			<button class="checkOut" id="checkOut" onclick="location.href = 'order_history.html';">Check
+				Out</button>
+		</div>
+	</div>
+
+	<script src="js/order_customer_page.js"></script>
+	<script src="../js/clock.js"></script>
+	<script src="js/cart.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+.orderBlock {
+	border: 1px solid black;
+	margin-top: 50px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+button {
+	border-radius: 2px;
+	color: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+	display: inline-block;
+	border: none;
+	margin-bottom: 10px;
+}
+
+.btn-accept {
+	background-color: green;
+}
+
+.btn-cancel {
+	background-color: red;
+}
+
+.order-id {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	display: inline-block;
+}
+
+.restraunt-name {
+	border-top-style: solid;
+	border-color: black;
+	border-width: 1px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	font-size: 18px;
+}
+
+.order-time {
+	padding-left: 15px;
+	display: inline-block;
+
+}
+
+.email {
+	display: inline-block;
+}
+
+.order-email {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	padding-left: 5px;
+	display: inline-block;
+}
+
+.order {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-color: black;
+	border-width: 1px;
+}
+
+.status {
+	margin-top: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top-style: double;
+	border-color: black;
+	border-width: 1px;
+}
+
+table {
+	width: 100%;
+	padding-left: 10px;
+}
+
+.item-price {
+	width: 50%;
+	padding-bottom: 15px;
+	padding-top: 5px;
+}
+
+.item-name {
+	width: 15%;
+}
+
+.quantity {
+	width: 10%;
+}
+
+.title {
+	margin-top: 140px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-left: 8px solid;
+	background-color: rgb(205, 188, 221);
+	border-color: rgb(66, 15, 114);
+}
+
+/* mouse trailer */
+.trailer {
+	position: fixed;
+	width: 20px;
+	height: 20px;
+	background-color: chartreuse;
+	border-radius: 50%;
+	z-index: 100000;
+	pointer-events: none;
+	/* Make the element non-interactive */
+	transition: opacity 500ms ease;
+	opacity: 0;
+	/* Initially hidden */
+	background-image: linear-gradient(to right bottom, #fdfa77, #ffcd48, #ff9c2b, #f96627, #eb1233);
+}
+
+.alert {
+	padding: 20px;
+	background-color: #2abd2c;
+	color: white;
+	position: fixed;
+	/* Use fixed positioning */
+	bottom: 20px;
+	/* Position 20px from the top */
+	left: 20px;
+	/* Position 20px from the right */
+	z-index: 1000;
+	/* Ensure it appears above other content */
+	border-radius: 5px;
+	/* Optional: add rounded corners */
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+	/* Optional: add a slight shadow */
+}
+
+.closebtn {
+	margin-left: 15px;
+	color: white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.closebtn:hover {
+	color: black;
+}
+
+
+.printOrders {
+	display: inline-block;
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px 20px;
+	font-size: 16px;
+	margin: 20px 0;
+	margin-left: 30px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+}
