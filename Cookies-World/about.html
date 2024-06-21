@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="css/shoppingCart.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+
+<body>
+    <!-- All website data store -->
+    <div class="container">
+        <header>
+            <div class="headerContainer">
+                <h3 class="logo">Cookie World</h3>
+                <nav class="navigation">
+                    <a href="landingPage.html">Home</a>
+                    <a href="howToUse.html">How to use</a>
+                    <a href="about.html">About</a>
+                    <a href="displayCards.html">Profile</a>
+                </nav>
+                <!-- Cart Icon -->
+                <div class="icon-cart">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M14 7h-4v3a1 1 0 0 1-2 0V7H6a1 1 0 0 0-.997.923l-.917 11.924A2 2 0 0 0 6.08 22h11.84a2 2 0 0 0 1.994-2.153l-.917-11.924A1 1 0 0 0 18 7h-2v3a1 1 0 1 1-2 0V7Zm-2-3a2 2 0 0 0-2 2v1H8V6a4 4 0 0 1 8 0v1h-2V6a2 2 0 0 0-2-2Z" clip-rule="evenodd" />
+                    </svg>
+                    <!-- display no of product -->
+                    <span>0</span>
+                </div>
+                <a class="btn-login" href="index.html">Login</a>
+            </div>
+        </header>
+        <div class="about-area">
+            <div class="aboutcontainer">
+                <div class="about-text">
+                    <h2>About Us</h2>
+                    <p>
+                        Cookie World is an ecommerce website dedicated to promoting desserts and drinks from café joints
+                        located near University Putra Malaysia. It implements a pre-order system to smoothen the ordering
+                        and queuing process, decreasing congestion in store and hosting a review system to offer insights to
+                        customers regarding the quality of the food items being sold.
+                    </p>
+                    <p>
+                        For customers, Cookie World serves as a centralized hub of information for multiple joints, allowing
+                        customers to locate up-to-date information on a variety of hosted cafés. Furthermore, Cookie World,
+                        which serves as an ecommerce website, allows the pre-ordering of food which can later be picked up by
+                        the customer.
+                    </p>
+                    <a href="#Contact" class="contact-btn">Contact Us</a>
+                </div>
+                <div class="about-slider-container">
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="images/Richamo.jpg" alt="Slide 1">
+                            <img src="images/he&she.jpg" alt="Slide 2">
+                            <img src="images/Chatime.jpg" alt="Slide 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contactcontainer" id="Contact">
+            <div class="form">
+                <div class="contact-info">
+                    <h3 class="title">Let's get in touch</h3>
+                    <p class="text">
+                        We'd love to hear from you! Whether you have a question about our products, need assistance with your order, or just want to give feedback, our team is here to help. Reach out to us and we'll respond as soon as we can.
+                    </p>
+                </div>
+
+                <div class="contact-form">
+                    <span class="circle one"></span>
+                    <span class="circle two"></span>
+
+                    <form action="php/about.php" method="POST" autocomplete="off">
+                        <h3 class="title">Contact us</h3>
+                        <div class="input-container">
+                            <p>Email</p>
+                            <input type="email" name="email" class="input" required />
+                            <label for="email" class="label"></label>
+                        </div>
+                        <div class="input-container">
+                            <p>Subject</p>
+                            <input type="text" name="subject" class="input" required />
+                            <label for="subject" class="label"></label>
+                        </div>
+                        <div class="input-container textarea">
+                            <p>Detail</p>
+                            <textarea name="detail" class="input" required></textarea>
+                            <label for="detail" class="label"></label>
+                        </div>
+                        <input type="submit" name="submit" value="Send" class="btn" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div id="snackbar" class="snackbar"><?php echo $statusMessage; ?></div>
+
+        <!-- mouse trailer -->
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+    </div>
+
+    <!-- CartTab -->
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+
+        <!-- Items in shopping cart stored -->
+        <div class="listCart">show item here</div>
+
+        <!-- Dropdown for selecting saved cards -->
+        <div class="payment-method">
+            <label for="savedCardsDropdown">Payment Details</label>
+            <select id="savedCardsDropdown">
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </div>
+
+        <!--Dropdown for specific request-->
+        <label for="speReq" class="speReq">Add a specific request</label>
+        <input list="Request" id="speReq" name="speReq" class="speReq" />
+        <datalist id="Request">
+            <option value="Less Sugar"></option>
+            <option value="No peanuts"></option>
+        </datalist>
+
+        <div class="btn">
+            <button id="clearCart">Clear Cart</button>
+            <button class="close">Close</button>
+            <button class="checkOut" onclick="location.href = 'order_restraunt_page.html';">Check Out</button>
+        </div>
+    </div>
+    <footer>
+        <div class="datetime">
+            <div class="date">
+                <span id="dayname">Day</span>,
+                <span id="month">Month</span>
+                <span id="daynum">00</span>,
+                <span id="year">Year</span>
+            </div>
+            <div class="time">
+                <span id="hour">00</span>:
+                <span id="minutes">00</span>:
+                <span id="seconds">00</span>
+                <span id="period">AM</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/clock.js"></script>
+    <script src="js/cart.js" type="module"></script>
+    <script src="js/about.js"></script>
+</body>
+
+</html>

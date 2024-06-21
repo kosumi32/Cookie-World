@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/toUse.css">
+    <link rel="stylesheet" href="css/shoppingCart.css">
+</head>
+
+<body>
+    <!-- All website data store -->
+    <div class="container">
+        <header>
+            <div class="headerContainer">
+                <h3 class="logo">Cookie World</h3>
+                <nav class="navigation">
+                    <a href="landingPage.html">Home</a>
+                    <a href="howToUse.html">How to use</a>
+                    <a href="about.html">About</a>
+                    <a href="displayCards.html">Profile</a>
+                </nav>
+                <!-- Cart Icon -->
+                <div class="icon-cart">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M14 7h-4v3a1 1 0 0 1-2 0V7H6a1 1 0 0 0-.997.923l-.917 11.924A2 2 0 0 0 6.08 22h11.84a2 2 0 0 0 1.994-2.153l-.917-11.924A1 1 0 0 0 18 7h-2v3a1 1 0 1 1-2 0V7Zm-2-3a2 2 0 0 0-2 2v1H8V6a4 4 0 0 1 8 0v1h-2V6a2 2 0 0 0-2-2Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    <!-- display no of product -->
+                    <span>0</span>
+                </div>
+                <a class="btn-login" href="login.html">Login</a>
+            </div>
+        </header>
+
+        <h1>How to Use the Website</h1>
+
+        <div class="wrapper">
+            <div class="wrappercontainer">
+                <input type="radio" name="slide" id="c1" checked>
+                <label for="c1" class="card">
+                    <div class="row">
+                        <div class="icon">1</div>
+                        <div class="description">
+                            <h4>Select your favorite cookies shop</h4>
+                            <p>Explore the list of cookie shops available on the website and choose your favorite.</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c2">
+                <label for="c2" class="card">
+                    <div class="row">
+                        <div class="icon">2</div>
+                        <div class="description">
+                            <h4>View details about the shop</h4>
+                            <p>Click on the shop's name to view details such as available cookies, reviews, and contact
+                                information</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c3">
+                <label for="c3" class="card">
+                    <div class="row">
+                        <div class="icon">3</div>
+                        <div class="description">
+                            <h4>Add cookies to your cart</h4>
+                            <p>Once you've found the cookies you want, click the "bag" button next to each cookie to add
+                                it
+                                to your shopping cart</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c4">
+                <label for="c4" class="card">
+                    <div class="row">
+                        <div class="icon">4</div>
+                        <div class="description">
+                            <h4>Review your cart</h4>
+                            <p>Click on the shopping cart icon to review the cookies you've added. You can adjust
+                                quantities
+                                or remove items as needed.</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c5">
+                <label for="c5" class="card">
+                    <div class="row">
+                        <div class="icon">5</div>
+                        <div class="description">
+                            <h4>Confirm and checkout</h4>
+                            <p>When you're ready to purchase, proceed to checkout. You'll be prompted to confirm your
+                                order
+                                and select a payment method.</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c6">
+                <label for="c6" class="card">
+                    <div class="row">
+                        <div class="icon">6</div>
+                        <div class="description">
+                            <h4>Complete payment</h4>
+                            <p>Payment can be made using debit/credit cards that are already saved in the app. Follow
+                                the
+                                prompts to complete the payment process securely.</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c7">
+                <label for="c7" class="card">
+                    <div class="row">
+                        <div class="icon">7</div>
+                        <div class="description">
+                            <h4>Receive real-time updates</h4>
+                            <p>Throughout the fulfillment process, you'll receive real-time updates about the status of
+                                your
+                                cookies order.</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c8">
+                <label for="c8" class="card">
+                    <div class="row">
+                        <div class="icon">8</div>
+                        <div class="description">
+                            <h4>Pick up your order</h4>
+                            <p>Once your order is ready, you can pick it up yourself at the designated store location.
+                                Enjoy
+                                your freshly baked cookies!</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+
+        <!-- mouse trailer -->
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+        <div class="trailer"></div>
+
+        <script src="js/howToUse.js"></script>
+    </div>
+
+    <!-- CartTab -->
+    <div class="cartTab">
+        <h1>Shopping Cart</h1>
+
+        <!-- Items in shopping cart stored -->
+        <div class="listCart">show item here</div>
+
+        <!-- Dropdown for selecting saved cards -->
+        <div class="payment-method">
+            <label for="savedCardsDropdown">Payment Details</label>
+            <select id="savedCardsDropdown">
+                <!-- Options will be populated by JavaScript -->
+            </select>
+        </div>
+
+        <!--Dropdown for specific request-->
+        <label for="speReq" class="speReq">Add a specific request</label>
+        <input list="Request" id="speReq" name="speReq" class="speReq" />
+        <datalist id="Request">
+            <option value="Less Sugar"></option>
+            <option value="No peanuts"></option>
+        </datalist>
+
+        <div class="btn">
+            <button id="clearCart">Clear Cart</button>
+            <button class="close">Close</button>
+            <button class="checkOut" id="checkOut" onclick="location.href = 'order_history.html';">Check
+                Out</button>
+        </div>
+    </div>
+    <footer>
+        <div class="datetime">
+            <div class="date">
+                <span id="dayname">Day</span>,
+                <span id="month">Month</span>
+                <span id="daynum">00</span>,
+                <span id="year">Year</span>
+            </div>
+            <div class="time">
+                <span id="hour">00</span>:
+                <span id="minutes">00</span>:
+                <span id="seconds">00</span>
+                <span id="period">AM</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/clock.js"></script>
+
+    <script src="js/cart.js" type="module"></script>
+</body>
+
+</html>
