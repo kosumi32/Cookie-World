@@ -8,9 +8,6 @@
     
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Linking to FireBase -->
-    <!-- <script type="module " src="js/register.js" defer></script> -->
 </head>
 
 <body>
@@ -42,37 +39,26 @@
     </header>
     
     <div class="wrapper">
-        <form id="loginForm" action="php/login.php" method="POST">
-            <h1>Login to the <i>Cookie World</i></h1>
-            
+        <form id="registerForm" action="php/register.php" method="POST">
+            <h1>Register for <i>Cookie World</i></h1>
+            <div class="input-box">
+                <input type="text" placeholder="Name" name="name" id="name" required>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Phone No." name="phone" id="phone" minlength="10" maxlength="11" required>
+            </div>
             <div class="input-box">
                 <input type="email" placeholder="Email" name="email" id="email" required>
-                
-                <!-- imported icon -->
-                <i class='bx bxs-user'></i>
             </div>
-            
             <div class="input-box">
-                <input type="password" placeholder="Password" name="password" id="password" required>
-                
-                <i class='bx bxs-lock-alt'></i>
+                <input type="password" placeholder="Password" name="password" id="password" minlength="8" required>
             </div>
-            
-            <div class="remember-forgot">
-                <label><input type="checkbox">Remember me</label>
-                <a href="#">Forgot Password?</a>
-            </div>
-            
-            <!-- <input type="submit" value="Login"> -->
-            <button type="submit" class="btn" id="submit">Login</button>
-            <!-- <button type="submit" class="btn" id="submit">Login</button> -->
-            
+            <button type="submit" class="btn" name ="register" id="register">Register</button>
             <hr>
-            
             <div class="register-link">
-                <p>Don't have an account? <a href="register.html">Register</a></p>
+                <p>Already have an account? <a href="index.html">Login</a></p>
             </div>
-        </form>
+        </form>            
     </div>
     
     <!-- mouse trailer -->

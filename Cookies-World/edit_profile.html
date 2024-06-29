@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/editprofile.css">
 </head>
 
 <body onload="initClock()">
@@ -36,7 +37,24 @@
         </div>
     </header>
     
-    <div id="contentTab">Content in template file</div>
+    <div class="editprofile">
+        <h3>Edit Profile</h3>
+        <form action="php/edit_profile.php" method="post">
+            <div class="input-container">
+                <p>Name</p>
+                <input type="text" name="name" class="input" id="name" required />
+            </div>
+            <div class="input-container">
+                <p>Phone Number</p>
+                <input type="text" name="phone" class="input" id="phone" minlength="10" maxlength="11" required></input>
+            </div>
+            <div class="input-container">
+                <p>Password</p>
+                <input type="password" name="password" class="input" id="password" minlength="8" required></input>
+            </div>
+            <button type="submit">Save Changes</button></td>
+        </form>
+    </div>
 </div>
 
 <!-- CartTab -->

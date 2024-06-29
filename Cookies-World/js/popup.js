@@ -1,25 +1,31 @@
 // Get the modal
 var modal = document.getElementById("myModal");
 
-// Fetch 'btn'
-var btn = document.getElementById("myBtn");
+// Get the remove card button
+var removeCardBtn = document.getElementById("removeCardBtn");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+// Get the Yes and No buttons inside the modal
+var btnYes = document.getElementById("btnYes");
+var btnNo = document.getElementById("btnNo");
 
-// replace btn with desired element!!!
-btn.onclick = function() {
-  modal.style.display = "block";
+// When the user clicks the remove card button, open the modal 
+removeCardBtn.onclick = function() {
+    modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
+// When the user clicks on Yes, submit the form
+btnYes.onclick = function() {
+    document.getElementById("removeCardForm").submit();
+}
+
+// When the user clicks on No, close the modal
+btnNo.onclick = function() {
+    modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }

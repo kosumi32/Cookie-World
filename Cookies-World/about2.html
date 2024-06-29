@@ -29,7 +29,7 @@
                 <a class="btn-login" href="index.html">Login</a>
             </div>
         </header>
-        
+
         <div class="about-area">
             <div class="aboutcontainer">
                 <div class="about-text">
@@ -61,7 +61,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="contactcontainer" id="Contact">
             <div class="form">
                 <div class="contact-info">
@@ -70,29 +70,29 @@
                         We'd love to hear from you! Whether you have a question about our products, need assistance with your order, or just want to give feedback, our team is here to help. Reach out to us and we'll respond as soon as we can.
                     </p>
                 </div>
-                
+
                 <div class="contact-form">
                     <span class="circle one"></span>
                     <span class="circle two"></span>
-                    
+
                     <form action="php/about.php" method="POST" autocomplete="off">
                         <h3 class="title">Contact us</h3>
                         <div class="input-container">
                             <p>Subject</p>
-                            <input type="text" name="subject" class="input" id="subject" required />
+                            <input type="text" name="subject" class="input" required />
                         </div>
                         <div class="input-container textarea">
                             <p>Detail</p>
-                            <textarea name="details" class="input" id="details" required></textarea>
+                            <textarea name="details" class="input" required></textarea>
                         </div>
-                        <input type="submit" name="submit" value="Send" class="btn" onclick= successSubmitInquiry() />
+                        <input type="submit" name="submit" value="Send" class="btn" />
                     </form>
                 </div>
             </div>
         </div>
-        
+
         <div id="snackbar" class="snackbar"></div>
-        
+
         <!-- mouse trailer -->
         <div class="trailer"></div>
         <div class="trailer"></div>
@@ -106,14 +106,14 @@
         <div class="trailer"></div>
         <div class="trailer"></div>
     </div>
-    
+
     <!-- CartTab -->
     <div class="cartTab">
         <h1>Shopping Cart</h1>
-        
+
         <!-- Items in shopping cart stored -->
         <div class="listCart">show item here</div>
-        
+
         <!-- Dropdown for selecting saved cards -->
         <div class="payment-method">
             <label for="savedCardsDropdown">Payment Details</label>
@@ -121,7 +121,7 @@
                 <!-- Options will be populated by JavaScript -->
             </select>
         </div>
-        
+
         <!--Dropdown for specific request-->
         <label for="speReq" class="speReq">Add a specific request</label>
         <input list="Request" id="speReq" name="speReq" class="speReq" />
@@ -129,7 +129,7 @@
             <option value="Less Sugar"></option>
             <option value="No peanuts"></option>
         </datalist>
-        
+
         <div class="btn">
             <button id="clearCart">Clear Cart</button>
             <button class="close">Close</button>
@@ -152,12 +152,10 @@
             </div>
         </div>
     </footer>
-    
+
     <script src="js/clock.js"></script>
     <script src="js/cart.js" type="module"></script>
     <script src="js/about.js"></script>
-    
-    
 </body>
 
 </html>

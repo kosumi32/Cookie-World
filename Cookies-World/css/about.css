@@ -4,9 +4,6 @@
 body {
   background-image: url("../images/background.jpg");
   font-family: 'Poppins', sans-serif;
-  color: #ffffff;
-  margin: 0;
-  padding: 0;
   overflow-x: hidden;
 }
 
@@ -18,88 +15,98 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 5%;
+  
 }
 
 .aboutcontainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding-top: 100px;
 }
 
 .about-text {
-    flex: 1;
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
 }
 
 .about-slider-container {
-    flex: 1;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
-    background: white;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+  background: white;
+}
+
+@media (max-width: 1100px) {
+  .about-slider-container{
+    display: none;
+  }
 }
 
 .slider {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .slides {
-    display: flex;
-    transition: transform 1s ease;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  transition: transform 1s ease;
+  width: 100%;
+  height: 100%;
 }
 
 .slides img {
-    width: 100%;
-    height: auto;
-    flex-shrink: 0;
-    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
 
 .slider::before,
 .slider::after {
-    content: "";
-    position: absolute;
-    width: 10%;
-    height: 100%;
-    z-index: 2;
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  z-index: 2;
 }
 
 .slider::before {
-    left: 0;
-    background: linear-gradient(to right, rgb(80, 80, 80), rgba(255, 255, 255, 0));
+  left: 0;
+  background: linear-gradient(to right, rgb(80, 80, 80), rgba(255, 255, 255, 0));
 }
 
 .slider::after {
-    right: 0;
-    background: linear-gradient(to left, rgb(80, 80, 80), rgba(255, 255, 255, 0));
+  right: 0;
+  background: linear-gradient(to left, rgb(80, 80, 80), rgba(255, 255, 255, 0));
+}
+
+.btn-section{
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .contact-btn {
-    margin-top: auto;
-    padding: 10px 20px;
-    background: #6A0DAD;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    justify-content: center;
-    transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  background: #6A0DAD;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  justify-content: center;
+  transition: background-color 0.3s ease;
 }
 
 .contact-btn:hover {
-    background-color: #e67575;
+  background-color: #e67575;
 }
 
 .about-img {
@@ -118,7 +125,7 @@ body {
 }
 
 .about-text h2 {
-  color: #6A0DAD;
+  color: #ffffff;
   font-size: 40px;
   margin-bottom: 20px;
 }
@@ -392,49 +399,49 @@ textarea.input {
 
 @-webkit-keyframes fadein {
   from {
-      bottom: 0;
-      opacity: 0;
+    bottom: 0;
+    opacity: 0;
   }
-
+  
   to {
-      bottom: 30px;
-      opacity: 1;
+    bottom: 30px;
+    opacity: 1;
   }
 }
 
 @keyframes fadein {
   from {
-      bottom: 0;
-      opacity: 0;
+    bottom: 0;
+    opacity: 0;
   }
-
+  
   to {
-      bottom: 30px;
-      opacity: 1;
+    bottom: 30px;
+    opacity: 1;
   }
 }
 
 @-webkit-keyframes fadeout {
   from {
-      bottom: 30px;
-      opacity: 1;
+    bottom: 30px;
+    opacity: 1;
   }
-
+  
   to {
-      bottom: 0;
-      opacity: 0;
+    bottom: 0;
+    opacity: 0;
   }
 }
 
 @keyframes fadeout {
   from {
-      bottom: 30px;
-      opacity: 1;
+    bottom: 30px;
+    opacity: 1;
   }
-
+  
   to {
-      bottom: 0;
-      opacity: 0;
+    bottom: 0;
+    opacity: 0;
   }
 }
 

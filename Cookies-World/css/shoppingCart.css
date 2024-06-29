@@ -1,246 +1,32 @@
-/* Cookies World Header */
-
-body {
-    color: black;
-}
-
-.title .headerContainer {
-    /* position: fixed; */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    backdrop-filter: blur(2px);
-    /* background: linear-gradient(45deg, rgb(66, 15, 114), rgb(175, 31, 108)); */
-}
-
-
-.logo {
-    font-size: 40px;
-    color: #000000;
-
-    /*	Prevent text selection*/
-    user-select: none;
-}
-
-.navigation a {
-    position: relative;
-    font-size: 20px;
-    color: #000000;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-}
-
-.navigation a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: plum;
-    /*	border-radius: 5px;*/
-    left: 0;
-    bottom: -5px;
-
-    /*	a: Starting position of the line is at 0*/
-    transform: scaleX(0);
-    transition: transform .5s;
-    transform-origin: right;
-}
-
-/*  b: Then change to 1*/
-.navigation a:hover::after {
-    transform-origin: left;
-    transform: scaleX(1);
-}
-
-.navbar-brand {
-    padding-left: 20px;
-    font-size: 45px;
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: 800;
-}
-
-.navbar-collapse {
-    justify-content: end;
-    margin-right: 3.5%;
-}
-
-.container-md {
-    margin: 15px auto 20px auto;
-}
-
-body {
-    margin: 0;
-    font-family: Poppins;
-}
-
-svg {
-    width: 30px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-button {
-    cursor: pointer;
-}
-
-.container {
-    width: 1000px;
-    max-width: 90vw;
-    margin: auto;
-    text-align: center;
-    padding-top: 10px;
-    transition: 0.5s;
-}
-
-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px 0;
-}
-
-.icon-cart {
-    position: relative;
-}
-
-.icon-cart span {
-    background-color: purple;
-    position: absolute;
-    top: 50%;
-    right: -10px;
-    width: 25px;
-    height: 25px;
-    color: aliceblue;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.title {
-    font-size: 45px;
-    margin-bottom: 15px;
-
-}
-
-/* cartTab */
-.cartTab {
-    background-color: purple;
-    color: aliceblue;
-
-    /* default size for laptop/ ipad */
-    width: 400px;
-
-    /* size for mobile */
-    max-width: 100%;
-
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    display: grid;
-    grid-template-rows: 70px 1fr 70px;
-}
-
-.cartTab h1 {
-    padding: 20px;
-    margin: 0;
-    font-weight: 300;
-}
-
-.cartTab .btn {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding-top: 10px;
-}
-
-.cartTab .btn button {
-    background-color: beige;
-    border: none;
-    font-family: Poppins;
-    font-weight: 500;
-    padding: 15px 20px;
-    font-size: 16px;
-}
-
-/* First button */
-.cartTab .btn button.close {
-    background-color: azure;
-}
-
-/* Payment method section */
-.payment-method {
-    text-align: center;
-}
-
-.payment-method label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-.payment-method select {
-    width: 90%;
-    padding: 7px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    margin: 0 auto; /* Center the select element */
-    display: block;
-}
-
-.cartTab .listCart {
-    /* a: In case too much items, it will not break */
-    overflow: auto;
-}
-
-/* b: In stead becomes a scrollbar */
-.cartTab .listCart::-webkit-scrollbar {
-    width: 0;
-}
-
-/* Open / Close shopping cart window */
-.cartTab {
-    right: -400px;
-    transition: 1s;
-}
-
-body.activeTabCart .cartTab {
-    right: 0;
-}
-
-body.activeTabCart .container {
-    transform: translate(-250px);
-}
-
-
-/* list item Product */
-.listProduct .item img {
-    width: 90%;
-
-    /* Make a shadow effect */
-    filter: drop-shadow(0 50px 20px #0009);
-}
-
+/* Product Styles */
 .listProduct {
+    padding-top: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
     display: grid;
-
-    /* Make them into 4 columns */
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
 
+.image-container {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    /* Center the container horizontally */
+}
+
+.image-container img {
+    max-width: 80%;
+    max-height: 80%;
+    filter: drop-shadow(0 10px 5px #0009);
+}
+
 .listProduct .item {
-    background-color: #eeeee6;
+    background-color: #eeeee6d7;
     padding: 20px;
     border-radius: 30px;
 }
@@ -264,14 +50,13 @@ body.activeTabCart .container {
     border-radius: 25px;
 }
 
-/* shopping cart */
+/* Shopping Cart Styles */
 .listCart .item img {
-    width: 100%;
+    width: 50px;
 }
 
 .listCart .item {
     display: grid;
-    /* Into 4 columns */
     grid-template-columns: 70px 150px 50px 1fr;
     gap: 12.5px;
     align-items: center;
@@ -291,20 +76,18 @@ body.activeTabCart .container {
     cursor: pointer;
 }
 
-/* Second span tag (Quantity) */
 .listCart .item .quantity span:nth-child(2) {
     background-color: transparent;
     color: #fff;
 }
 
-/* If many product */
 .listCart .item:nth-child(even) {
     background-color: #eee1;
 }
 
-
-/* Detail */
+/* Detail Styles */
 .detail {
+    padding-top: 150px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
@@ -312,7 +95,8 @@ body.activeTabCart .container {
 }
 
 .detail .image img {
-    width: 100%;
+    width: 70%;
+    margin-left: 5%;
 }
 
 .detail .image {
@@ -323,13 +107,9 @@ body.activeTabCart .container {
     position: absolute;
     width: 300px;
     height: 300px;
-
-    /* For before to work */
     content: " ";
     background-color: #94817733;
     z-index: -1;
-
-    /* Random number */
     border-radius: 185px 100px 165px 120px;
     left: calc(50% - 150px);
     top: 50px;
@@ -369,7 +149,6 @@ body.activeTabCart .container {
     box-shadow: 0 10px 20px #2F2F2F77;
 }
 
-/* Adjust the height of the shopping cart icon */
 .detail .buttons svg {
     transform: translateY(-2.5px);
 }
@@ -379,7 +158,173 @@ body.activeTabCart .container {
     font-weight: 300;
 }
 
-/* responsive */
+/* Content Container */
+.content-container {
+    background: #ffffff;
+    margin-top: 30px;
+    padding: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Review Styles */
+.review {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.review .reviewcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.review .title {
+    margin: 20px 0;
+    padding-left: 10px;
+    border-left: 8px solid rgb(66, 15, 114);
+    font-size: 2vw;
+    font-weight: bold;
+    color: rgb(66, 15, 114);
+}
+
+.review .title b {
+    background-color: rgb(205, 188, 221);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.review p {
+    background-color: rgb(235, 213, 255);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.review .commentSection,
+.review .latestReviews {
+    background: linear-gradient(45deg, rgb(66, 15, 114), rgb(175, 31, 108));
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.review .latestReviews:empty {
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.input-box {
+    width: 100%;
+    margin: 10px 0;
+}
+
+.input-box label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    border: 2px solid #ccc;
+    outline: none;
+    font-size: 16px;
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 5px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.input-box input:focus,
+.input-box textarea:focus,
+.input-box input:valid,
+.input-box textarea:valid {
+    border-color: rgb(66, 15, 114);
+    background-color: rgba(205, 188, 221, 0.2);
+}
+
+.input-box textarea {
+    resize: none;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.button {
+    margin-top: 12px;
+}
+
+.button input,
+#displayList {
+    color: white;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background: rgb(66, 15, 114);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#displayList {
+    margin-top: 15px;
+    margin-left: 23px;
+    
+}
+
+.button input[type="submit"]:hover {
+    background: rgb(66, 15, 114);
+}
+
+/* Restaurant Photo Styles */
+.restaurant-photo {
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 6px;
+}
+
+.restaurant-photo img {
+    width: 300px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-photo .info-text {
+    padding-left: 15px;
+}
+
+.restaurant-photo .info-text h3 {
+    font-size: 24;
+    color: rgb(66, 15, 114);
+    margin: 10px 10px;
+}
+
+.restaurant-photo .info-text h3 a {
+    color: rgb(175, 31, 108);
+    text-decoration: none;
+}
+
+.restaurant-photo .info-text h3 a:hover {
+    text-decoration: underline;
+}
+
+
+/* Special Request Section */
+.speReq {
+    margin: 0 20%;
+}
+
+/* Responsive Styles */
 @media screen and (max-width: 992px) {
     .listProduct {
         grid-template-columns: repeat(3, 1fr);
@@ -390,125 +335,23 @@ body.activeTabCart .container {
     .listProduct {
         grid-template-columns: repeat(2, 1fr);
     }
-
+    
     .detail {
         grid-template-columns: 1fr;
         text-align: center;
     }
-
+    
     .detail .image img {
         width: unset;
         height: 40vh;
     }
-
+    
     .detail .name {
         font-size: x-large;
         margin: 0;
     }
-
+    
     .detail .buttons button {
         font-size: small;
     }
-}
-
-
-
-
-/* Phoo Part */
-.review {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.review .title {
-    margin-top: 100px;
-    padding-left: 10px;
-    margin-bottom: 50px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-left: 8px solid;
-    background-color: rgb(205, 188, 221);
-    border-color: rgb(66, 15, 114);
-    font-size: 2vw;
-}
-
-.review h2 {
-    margin: 20px;
-}
-
-.review p {
-    background-color: rgb(235, 213, 255);
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px
-}
-
-.review .commentSection {
-    background: linear-gradient(45deg, rgb(66, 15, 114), rgb(175, 31, 108));
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-}
-
-.review .latestReviews {
-    background: linear-gradient(45deg, rgb(66, 15, 114), rgb(175, 31, 108));
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-}
-
-.restaurant-photo img {
-    width: 30%;
-}
-
-.restaurant-photo {
-    display: flex;
-    justify-content: space-between;
-    margin-left: 10vw;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-}
-
-.restaurant-photo .info-text {
-    padding-top: 150px;
-    margin-left: 100px;
-    margin-right: 200px;
-}
-
-/* mouse trailer */
-.trailer {
-    position: fixed;
-    width: 20px;
-    height: 20px;
-    background-color: chartreuse;
-    border-radius: 50%;
-    z-index: 100000;
-    pointer-events: none;
-    /* Make the element non-interactive */
-    transition: opacity 500ms ease;
-    opacity: 0;
-    /* Initially hidden */
-    background-image: linear-gradient(to right bottom, #fdfa77, #ffcd48, #ff9c2b, #f96627, #eb1233);
-}
-.speReq{
-    margin: 0 20%;
-}
-
-.ReviewInput{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 10px;
- 
-   border: solid black 5px;
-}
-input {
-    width: 10vw;
-    padding: 6px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-  }
-.Content {
-    width: 90vw;
-    height: 10vw; 
 }

@@ -4,15 +4,42 @@
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
 }
-
-.orderBlock {
-	border: 1px solid black;
-	margin-top: 50px;
-	margin-left: 10px;
-	margin-right: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
+#order-history{
+	background-color: thistle;
+	margin: 20px;
 }
+.orderBlock {
+	background-color: white;
+	color: black;
+	padding: 10px;
+	margin: 10px 0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.order-id, .order-time, .order {
+	margin: 5px 0;
+}
+
+.item-name, .quantity, .item-price, .totalLabel, .totalPrice {
+	background-color: white;
+	color: black;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+td {
+	padding: 5px;
+	border: 1px solid #ddd;
+}
+
+.totalLabel, .totalPrice {
+	font-weight: bold;
+}
+
 
 button {
 	border-radius: 2px;
@@ -52,7 +79,7 @@ button {
 .order-time {
 	padding-left: 15px;
 	display: inline-block;
-
+	
 }
 
 .email {

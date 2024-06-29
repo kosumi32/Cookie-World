@@ -41,24 +41,24 @@ document.addEventListener("mouseout", function (e) {
 function animateTrailers() {
     let x = coords.x;
     let y = coords.y;
-
+    
     trailers.forEach(function (trailer, index) {
         trailer.style.left = x - trailer.offsetWidth / 2 + "px";
         trailer.style.top = y - trailer.offsetHeight / 2 + "px";
-
+        
         // Scale effect based on position in the list
         trailer.style.transform = `scale(${(trailers.length - index) / 10})`;
-
+        
         // Update trailer coordinates
         trailer.x = x;
         trailer.y = y;
-
+        
         // Calculate the new position for the next trailer
         const nextTrailer = trailers[index + 1] || trailers[0];
         x += (nextTrailer.x - x) * 0.5;
         y += (nextTrailer.y - y) * 0.5;
     });
-
+    
     requestAnimationFrame(animateTrailers);
 }
 
@@ -69,14 +69,14 @@ animateTrailers();
 function updateClock() {
     var now = new Date();
     var dname = now.getDay(),
-        mo = now.getMonth(),
-        dnum = now.getDate(),
-        yr = now.getFullYear(),
-        hou = now.getHours(),
-        min = now.getMinutes(),
-        sec = now.getSeconds(),
-        pe = "AM";
-
+    mo = now.getMonth(),
+    dnum = now.getDate(),
+    yr = now.getFullYear(),
+    hou = now.getHours(),
+    min = now.getMinutes(),
+    sec = now.getSeconds(),
+    pe = "AM";
+    
     if (hou == 0) {
         hou = 12;
     }
@@ -84,11 +84,11 @@ function updateClock() {
         hou = hou - 12;
         pe = "PM";
     }
-
+    
     Number.prototype.pad = function (digits) {
         return this.toString().padStart(digits, '0');
     }
-
+    
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];

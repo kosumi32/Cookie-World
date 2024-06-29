@@ -1,50 +1,40 @@
 <?php
-$servername = "localhost";
-$username = "root"; // Replace with your MySQL username
-$password = '';     // Replace with your MySQL password
-$dbname = "cookies-world";
+session_start();
+require_once 'conn.php';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Enable detailed error reporting
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-if (isset($_POST['submit'])) {
-    // Retrieve form data
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $details = $_POST['detail'];
-
-    // Insert data into the database
-    $sql = "INSERT INTO contact_inquiry (email, subject, details) VALUES ('$email', '$subject', '$details')";
-    if ($conn->query($sql) === TRUE) {
-        echo "New message posted successfully!";
-    } else {
-        echo "Error: " . $conn->error;
+try {
+    // Handle form submissions
+    if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
+        if (isset($_SESSION['user_id'])) {
+            $user_id = $_SESSION['user_id'];
+            $subject = $_POST['subject'];
+            $details = $_POST['details'];
+            
+            // Prepare and execute the SQL statement
+            $sql = "INSERT INTO contact_inquiry (user_id, subject, details) VALUES (:user_id, :subject, :details)";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':user_id', $user_id);
+            $stmt->bindParam(':subject', $subject);
+            $stmt->bindParam(':details', $details);
+            $stmt->execute();
+            
+            header("Location: ../about.html");
+            
+        } else {
+            echo "You must be logged in to submit an inquiry.";
+        }
     }
-}
-
-// Fetching and displaying the inquiries
-$sql = "SELECT email, subject, details, created_at FROM contact_inquiry ORDER BY created_at DESC";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    // Output data of each row
-    while ($row = $result->fetch_assoc()) {
-        echo "<div class='message'>";
-        echo "<strong>Email: " . htmlspecialchars($row["email"]) . "</strong><br>";
-        echo "<strong>Subject: " . htmlspecialchars($row["subject"]) . "</strong><br>";
-        echo htmlspecialchars($row["details"]);
-        echo "<br><small>Posted on: " . $row["created_at"] . "</small>";
-        echo "</div><hr>";
-    }
-} else {
-    echo "No messages yet!";
+} catch(PDOException $e) {
+    echo "Database Error: " . $e->getMessage();
+} catch(Exception $e) {
+    echo "Error: " . $e->getMessage();
 }
 
 // Close the connection
-$conn->close();
+$conn = null;
 ?>

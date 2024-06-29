@@ -1,0 +1,36 @@
+table {
+    border-collapse: collapse;
+    margin-left: 20px;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+td {
+    background-color: white;
+}
+
+th {
+    background-color: white;
+}
+
+.container {
+    margin-right: 32px;
+}
+
+.title {
+    margin-bottom: 20px;
+    margin-right: 21px;
+}
+
+#back {
+    background: linear-gradient(45deg, rgb(66, 15, 114), rgb(175, 31, 108));
+    border: 1px solid black;
+    color: white;
+    margin-top: 10px;
+    margin-left: 13px;
+    padding: 10px;
+}

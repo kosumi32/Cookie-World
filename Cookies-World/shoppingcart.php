@@ -1,87 +1,103 @@
-<?php 
-include 'shoppingCart.html';
-$servername = "localhost";
-$username = "root"; // Replace with your MySQL username
-$password = '';     // Replace with your MySQL password
-$dbname = "Cookies-World";
+<!DOCTYPE html>
+<html lang="en">
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/shoppingCart.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-function postReview($Email, $StoreID, $PublishTime, $Rating, $Content,$conn){
-    $ReviewID = $Email.$StoreID.$PublishTime;
-    $sql = "INSERT INTO reviewcookie (ReviewID, Email, StoreID, PublishTime, Rating, Content) VALUES 
-    ('$ReviewID', '$Email', $StoreID, '$PublishTime', $Rating, '$Content')";
-    if ($conn->query($sql) === TRUE) {
-        echo "New message posted successfully!";
-        }
-    else{
-        echo "Error";
-    };
-}
-if(isset($_POST['submit'])) {
-    // Retrieve form data
-    $Email = $_POST['Email'];
-    $Content = $_POST['Content'];
-    $Rating = $_POST['Rating'];
-    $StoreID = 1; // You may change this according to your logic
-    $PublishTime = date("Y-m-d H:i:s"); // Current date and time
-
-    // Call the postReview function
-    postReview($Email, $StoreID, $PublishTime, $Rating, $Content,$conn);
-}
-
-
-function getReview($conn){
-    $sql = "SELECT ReviewID, Email, StoreID, PublishTime, Rating, Content FROM reviewcookie ORDER BY PublishTime DESC";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        $reviewData = array();
-        while ($row = $result->fetch_assoc()) {
-            // Create a temporary array for each row
-            $tempArray = array(
-                $row["ReviewID"],
-                $row["Email"],
-                $row["StoreID"],
-                $row["PublishTime"],
-                $row["Rating"],
-                $row["Content"]
-            );
-            // Push the temporary array into $reviewData
-            array_push($reviewData, $tempArray);
-        }
-        return $reviewData;
-    } else {
-        return "No reviews yet!";
-    }
-}
-?>
-<script>
-    function createReview(){
-        let Review = document.getElementById('latestReviews');
-        var arrayData = <?php echo json_encode(getReview($conn)); ?>;
-        console.log(arrayData); 
-        for(let i = 0; i < arrayData.length; i++){
-            let newReview = document.createElement('div');
-            newReview.className = 'reviewContent';
-            newReview.innerHTML = `
-                <div>
-                    <p>
-                        ${arrayData[i][3]} <br>
-                        <strong>${arrayData[i][1]} Says:</strong></br>
-                    
-                    ${arrayData[i][5]}</br>
-                    Giving ${arrayData[i][4]} amount of Stars</p>
-                </div>
-            `;
-            Review.appendChild(newReview);
-        }
-    }
-    createReview();
+<body>
     
-</script>
+    <!-- Embed the template file Content ID -->
+    <div id="app"></div>
+    <div id="temporaryContent">
+        <div class="listProduct">
+            Content file index
+        </div>
+    </div>
+    <button id="displayList" onclick="window.location.href='php/display_cookies.php'">Display Cookies List</button>
+    
+    <!-- Phoo Parts -->
+    <div class="content-container">
+        <div class="review">
+            <div class="title"><b>Latest Reviews</b></div>
+            <div class="latestReviews" id="latestReviews"></div>
+            <div class="reviewcontent">
+                <form id="reviewForm" action="php/shoppingcart.php" method="post">
+                    <div class="input-box">
+                        <label for="Email">Email</label>
+                        <input required type="text" name="Email" class="Email">
+                    </div>
+                    <div class="input-box">
+                        <label for="Content">Review</label>
+                        <textarea required name="Content" class="Content"></textarea>
+                    </div>
+                    <div class="input-box">
+                        <label for="Rating">Stars</label>
+                        <input required type="number" name="Rating" min="1" max="5">
+                    </div>
+                    <div class="button">
+                        <input type="submit" name="submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Restaurant Info -->
+        <div class="restaurant-photo">
+            <img src="images/he&she.jpg" alt="hnscafe photo">
+            <div class="info-text">
+                <h3>He & She Cafe</h3>
+                <h3>Address: He & She Coffee UPM, Persiaran Tulang Daing Seri Kembangan, 43400 Serdang, Selangor</h3>
+                <h3>Instagram: <a target="_blank" href="https://www.instagram.com/heandshecoffeeupm/">heandshecoffeeupm</a></h3>
+                <h3>Phone: 019-3923019</h3>
+            </div>
+        </div>
+    </div>
+    
+    <!-- mouse trailer -->
+    <div class="trailer"></div>
+    <div class="trailer"></div>
+    <div class="trailer"></div>
+    <div class="trailer"></div>
+    <div class="trailer"></div>
+    <div class="trailer"></div>
+    <div class="trailer"></div>
+    <div class="trailer"></div>
+    <div class="trailer"></div>
+    <div class="trailer"></div>
+    <div class="trailer"></div>
+    
+    <script src="js/shoppingCart.js" type="module"></script>
+    <!-- JavaScript for Displaying Reviews -->
+    <script>
+        function fetchReviews() {
+            fetch('php/shoppingcart.php') // Adjust URL as per your PHP script for fetching reviews
+            .then(response => response.json())
+            .then(data => {
+                let reviewContainer = document.getElementById('latestReviews');
+                reviewContainer.innerHTML = ''; // Clear previous content
+                data.forEach(review => {
+                    let newReview = document.createElement('div');
+                    newReview.className = 'reviewContent';
+                    newReview.innerHTML = `
+                    <p>
+                        ${review['Content']} <br>
+                        <strong>${review['Email']} Says:</strong><br>
+                        Giving ${review['Rating']} stars
+                    </p>
+                    `;
+                    reviewContainer.appendChild(newReview);
+                });
+            })
+            .catch(error => console.error('Error fetching reviews:', error));
+        }
+        
+        fetchReviews();
+    </script>
+</body>
+
+</html>

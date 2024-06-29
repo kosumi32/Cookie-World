@@ -9,28 +9,28 @@ error_reporting(E_ALL);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Check if form fields are filled
-    if (!empty($_POST['name']) && !empty($_POST['phone']) && !empty($_POST['email']) && !empty($_POST['password'])) {
+    if (!empty($_POST['name']) && !empty($_POST['phone']) && !empty($_POST['password'])) {
         try {
+            $email = $_SESSION['user_email'];
             $name = $_POST['name'];
             $phone = $_POST['phone'];
-            $email = $_POST['email'];
             $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
             
             // Prepare the SQL statement
-            $sql = "INSERT INTO users (name, phone, email, password) VALUES (:name, :phone, :email, :password)";
+            $sql = "UPDATE users SET name = :name, phone = :phone, password = :password WHERE email = :email";
             $stmt = $conn->prepare($sql);
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':phone', $phone);
-            $stmt->bindParam(':email', $email);
             $stmt->bindParam(':password', $password);
+            $stmt->bindParam(':email', $email);
             
             // Execute the prepared statement
             if ($stmt->execute()) {
                 // Set session message
-                $_SESSION['message'] = array("text" => "User successfully created.", "alert" => "info");
+                $_SESSION['message'] = array("text" => "Profile successfully updated.", "alert" => "info");
                 
-                // Redirect to index.html
-                header('Location: ../index.html');
+                // Redirect to profile page
+                header('Location: ../profile.php');
                 exit();
             } else {
                 throw new Exception("Failed to execute the query.");
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         // Missing form data
         echo "<script>alert('Please fill up the required fields!');</script>";
-        echo "<script>window.location = '../index.html';</script>";
+        echo "<script>window.location = 'edit_profile.html';</script>";
     }
 } else {
     // Invalid request method

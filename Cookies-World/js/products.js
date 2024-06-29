@@ -15,7 +15,7 @@ const products = [
         "description": "Classic cookie with a soft, chewy texture and loaded with chocolate chips.",
         "image": "images/cookies/2.png"
 
-    },
+},
     {
         "id": 3,
         "name": "Oatmeal Raisin Cookie",
